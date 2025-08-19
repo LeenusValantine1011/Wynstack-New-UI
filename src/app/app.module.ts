@@ -8,6 +8,7 @@ import { ClienteleComponent } from './clientele/clientele.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { JourneysectionComponent } from './journeysection/journeysection.component';
 import { ContactsectionComponent } from './contactsection/contactsection.component';
+import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactsectionComponent } from './contactsection/contactsection.compone
     ClienteleComponent,
     ServicesSectionComponent,
     JourneysectionComponent,
-    ContactsectionComponent
+    ContactsectionComponent,
+    CustomCursorComponent
   ],
   imports: [
     BrowserModule,
