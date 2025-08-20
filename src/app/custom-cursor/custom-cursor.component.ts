@@ -8,13 +8,12 @@ import { gsap } from 'gsap';
 })
 export class CustomCursorComponent implements OnInit, OnDestroy {
   private cursor!: HTMLElement;
-  private active = false;
   private lastX = 0;
   private lastY = 0;
   private currentX = 0;
   private currentY = 0;
-  private pageX = 0;
-  private pageY = 0;
+  private mouseX = 0;
+  private mouseY = 0;
   private velocity = 0;
   private theta = 0;
   private ease = 0.15;
@@ -41,15 +40,14 @@ export class CustomCursorComponent implements OnInit, OnDestroy {
   }
 
   private onMouseMove = (e: MouseEvent) => {
-    this.pageX = e.pageX;
-    this.pageY = e.pageY;
-    this.active = true;
+    // Viewport coordinates
+    this.mouseX = e.clientX;
+    this.mouseY = e.clientY;
+
     this.cursor.style.opacity = '0.25';
   };
 
   private onMouseLeave = () => {
-    this.active = false;
-    this.velocity = 0;
     this.cursor.style.opacity = '0';
   };
 
@@ -57,8 +55,9 @@ export class CustomCursorComponent implements OnInit, OnDestroy {
     this.lastX = this.currentX;
     this.lastY = this.currentY;
 
-    this.currentX += (this.pageX - this.currentX) * this.ease;
-    this.currentY += (this.pageY - this.currentY) * this.ease;
+    // Smoothly follow the mouse
+    this.currentX += (this.mouseX - this.currentX) * this.ease;
+    this.currentY += (this.mouseY - this.currentY) * this.ease;
 
     const deltaX = this.currentX - this.lastX;
     const deltaY = this.currentY - this.lastY;
@@ -68,6 +67,7 @@ export class CustomCursorComponent implements OnInit, OnDestroy {
     const vY = this.clamp(Math.abs(deltaY) / this.threshold, 0, 1);
     this.velocity = (vX + vY) * 0.5;
 
+    // Transform using only viewport coordinates
     this.cursor.style.transform = `
       translate3d(${this.currentX}px, ${this.currentY}px, 0)
       rotate(${this.theta.toFixed()}deg)
