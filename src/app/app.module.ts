@@ -9,6 +9,7 @@ import { ServicesSectionComponent } from './services-section/services-section.co
 import { JourneysectionComponent } from './journeysection/journeysection.component';
 import { ContactsectionComponent } from './contactsection/contactsection.component';
 import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
+import { DecryptedTextComponent } from './decrypted-text/decrypted-text.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
     ServicesSectionComponent,
     JourneysectionComponent,
     ContactsectionComponent,
-    CustomCursorComponent
+    CustomCursorComponent,
+    DecryptedTextComponent
   ],
   imports: [
     BrowserModule,

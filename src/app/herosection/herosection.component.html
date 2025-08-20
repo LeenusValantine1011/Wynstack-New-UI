@@ -22,9 +22,19 @@
         <div class="row align-items-center">
             <div class="col-lg-6 hero-text">
                 <h1 class="hero-title">
-                    Build for <br />
-                    <img src="assets/hero/shield.svg" alt="shield" class="shield-icon" /> the bold.
+                    <app-decrypted-text [text]="'Build for'" [speed]="100" [delay]="400"
+                        [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
+                    </app-decrypted-text>
+
+                    <br />
+
+                    <img src="assets/hero/shield.svg" alt="shield" class="shield-icon" />
+
+                    <app-decrypted-text [text]="'the bold.'" [speed]="100" [delay]="900" 
+                        [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
+                    </app-decrypted-text>
                 </h1>
+
 
                 <div class="contact-block">
                     <p class="contact-title"> <i class="bi bi-arrow-right-circle"></i>Contact Us</p>

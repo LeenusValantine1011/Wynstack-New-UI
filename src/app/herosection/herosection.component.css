@@ -12,7 +12,6 @@
     margin: 0 8px;
 }
 
-
 .nav-cont {
     text-align: center;
     margin-left: 70px;
@@ -115,8 +114,8 @@
   }
   
   .hero-title {
-    font-family: "Righteous", sans-serif;
-    font-size: 4rem;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5rem;
     font-weight: 400;
     line-height: 1.2;
     color: #000;
@@ -183,5 +182,13 @@
       height: 280px;
       margin-top: 2rem;
     }
+  }
+
+  .decrypted-text {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: inherit;
+    letter-spacing: 2px;
   }
   
