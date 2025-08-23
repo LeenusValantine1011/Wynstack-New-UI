@@ -1,55 +1,77 @@
-<section class="hero-section d-flex flex-column">
-    <header class="hero-header container-fluid d-flex justify-content-between align-items-center py-3">
-        <div class="d-flex align-items-center">
+<section class="hero-section position-relative">
+  <!-- Background -->
+  <app-dot-grid class="hero-bg"></app-dot-grid>
 
-            <h3 class="logo-text text-light">wynstack</h3>
+  <div class="hero-content position-relative ">
+    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
+      <h3 class="logo-text text-light ms-4">wynstack</h3>
 
-            <nav>
-                <ul class="nav nav-cont">
-                    <li class="nav-item"><a class="nav-link link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                </ul>
-            </nav>
+      <!-- Navigation -->
+      <nav class="d-none d-lg-flex flex-grow-1 justify-content-center">
+        <ul class="nav nav-cont ">
+          <li class="nav-item">
+            <a class="nav-link link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
 
-        </div>
-
-        <a class="connect-btn" href="#">Let’s Connect<span></span></a>
+      <!-- Button -->
+      <div class="btn-area">
+        <a class="connect-btn" href="#">
+          Let’s Connect
+          <span></span>
+        </a>
+      </div>
     </header>
 
+    <!-- Hero Text / Left Column -->
     <div class="hero-container container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6 hero-text">
-                <h1 class="hero-title">
-                    <app-decrypted-text [text]="'Build for'" [speed]="100" [delay]="400"
-                        [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
-                    </app-decrypted-text>
+      <div class="row mt-0 align-items-center">
+        <div class="col-lg-6 hero-text">
+          <h1 class="hero-title">
+            <app-decrypted-text [text]="'Build for'" [speed]="100" [delay]="400"
+              [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
+            </app-decrypted-text>
+            <br />
+            <img src="assets/hero/shield.svg" alt="shield" class=" me-3 shield-icon" />
+            <app-decrypted-text [text]="'the bold.'" [speed]="100" [delay]="900"
+              [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
+            </app-decrypted-text>
+          </h1>
 
-                    <br />
-
-                    <img src="assets/hero/shield.svg" alt="shield" class="shield-icon" />
-
-                    <app-decrypted-text [text]="'the bold.'" [speed]="100" [delay]="900" 
-                        [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
-                    </app-decrypted-text>
-                </h1>
-
-
-                <div class="contact-block">
-                    <p class="contact-title"> <i class="bi bi-arrow-right-circle"></i>Contact Us</p>
-                    <hr class="divider" />
-                    <p class="contact-desc">
-                        We help ambitious brands grow with high-impact websites,
-                        sales-driven Shopify stores, and performance-focused digital
-                        marketing. From design to deployment, we make your online presence
-                        unstoppable.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-6 hero-image">
-                <div class="image-placeholder"></div>
-            </div>
+          <!-- Contact Block -->
+          <div class="contact-block mt-4">
+            <app-interactive-hover-button [label]="'Contact Us'"></app-interactive-hover-button>
+            <hr class="divider" />
+            <p class="contact-desc">
+              We help ambitious brands grow with high-impact websites, sales-driven Shopify
+              stores, and performance-focused digital marketing. From design to deployment,
+              we make your online presence unstoppable.
+            </p>
+          </div>
         </div>
+
+        <!-- Right column (optional image / animation slot) -->
+        <div class="col-lg-6 hero-img d-none d-lg-flex justify-content-end">
+          <div class="tilted-wrapper">
+            <app-tilted-card 
+              imageUrl="assets/hero/1611723379.svg" 
+              label="Wynstack" 
+              class="img-fluid">
+            </app-tilted-card>
+          </div>
+        </div>
+        
+      </div>
     </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+.tilted-card-figure {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tilted-card-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tilted-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tilted-card-caption {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
