@@ -10,6 +10,10 @@ import { JourneysectionComponent } from './journeysection/journeysection.compone
 import { ContactsectionComponent } from './contactsection/contactsection.component';
 import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
 import { DecryptedTextComponent } from './decrypted-text/decrypted-text.component';
+import { DotGridComponent } from './dot-grid/dot-grid.component';
+import { PillNavComponent } from './pill-nav/pill-nav.component';
+import { InteractiveHoverButtonComponent } from './interactive-hover-button/interactive-hover-button.component';
+import { TiltedCardComponent } from './tilted-card/tilted-card.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +24,16 @@ import { DecryptedTextComponent } from './decrypted-text/decrypted-text.componen
     JourneysectionComponent,
     ContactsectionComponent,
     CustomCursorComponent,
-    DecryptedTextComponent
+    DecryptedTextComponent,
+    DotGridComponent,
+    PillNavComponent,
+    InteractiveHoverButtonComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    TiltedCardComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

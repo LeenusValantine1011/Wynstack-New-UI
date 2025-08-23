@@ -1,57 +1,101 @@
 .hero-section {
-    height: 110vh;
-    background: url('src/assets/hero/Hero.svg') no-repeat center center;
-    background-size: cover;
-    color: #000;
-    background-color: #1E1D20;
+  position: relative;
+  overflow: hidden; /* ensures dots don’t overflow */
 }
 
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind all content */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* ensures content appears above the dots */
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: -1;
+}
 .hero-header .nav-link {
-    color: #000;
-    font-weight: 500;
-    margin: 0 8px;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 8px;
 }
 
 .nav-cont {
-    text-align: center;
-    margin-left: 70px;
-    margin-top: 30px;
-    border: 0.5px solid #000000;
-    border-radius: 20px;
-    background: transparent;
-    padding: 8px; 
+  text-align: center;
+  margin-left: 70px;
+  margin-top: 30px;
+  padding: 8px 20px;
+  border-radius: 20px;
 
-  }
-  
-  .nav-cont .nav-link {
+  background: rgba(255, 255, 255, 0.058);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
-    font-weight: 300; 
-    font-size: 16px;
-    color: #000;
-    position: relative; /* for hover underline */
-    transition: color 0.3s ease;
-  }
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-cont::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+ 
+}
+
+.nav-cont::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
   
-  /* Beautiful hover effect */
-  .nav-cont .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 50%;
-    bottom: -4px;
-    background: #000;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-  }
-  
-  .nav-cont .nav-link:hover {
-    color: #444; 
-  }
-  
-  .nav-cont .nav-link:hover::after {
-    width: 100%; 
-  }
+}
+
+.nav-cont .nav-link {
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-cont .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: -4px;
+  background: #000;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-cont .nav-link:hover {
+  color: #9d9d9d;
+}
+
+.nav-cont .nav-link:hover::after {
+  width: 100%;
+}
+
   
 
 .logo-text {
@@ -112,13 +156,13 @@
   .hero-text {
     padding-right: 2rem;
   }
-  
+   
   .hero-title {
     font-family: "Jersey 10", sans-serif;
     font-size: 5rem;
     font-weight: 400;
     line-height: 1.2;
-    color: #000;
+    color: #ffffff;
   }
   
   .hero-title .emoji {
@@ -153,19 +197,25 @@
     max-width: 500px;
   }
   
-  /* Right Image Container */
   .hero-image {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
   }
   
-  .image-placeholder {
-    width: 380px;
-    height: 380px;
-    background: #d9d9d9;
-    border-radius: 4px;
-  }
+/* Wrapper ensures card is at the far right and hover area = image + 12px */
+.tilted-wrapper {
+  display: inline-block;
+  padding: 12px; /* exactly 12px around the card */
+  margin-right: 0; /* stick to right edge */
+}
+
+.hero-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* optional vertical centering */
+}
+
   
   /* Responsive */
   @media (max-width: 992px) {
@@ -184,11 +234,13 @@
     }
   }
 
-  .decrypted-text {
+  .decrypted-text{
     font-size: inherit;
     font-weight: inherit;
     color: inherit;
     line-height: inherit;
     letter-spacing: 2px;
   }
+  
+
   
