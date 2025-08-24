@@ -1,4 +1,4 @@
-<section class="services-section text-white py-5 px-3">
+<section class="services-section text-white py-5 px-3"> 
   <div class="container">
     <h2 class="section-title mb-2">How can Wynstack Help?</h2>
     <hr class="section-underline">
@@ -7,26 +7,28 @@
       <p>
         From crafting high-performance websites to building sales-driven Shopify stores and executing data backed digital marketing campaigns, we provide everything you need to grow your brand online.
       </p>
-      <i class="bi bi-circle-fill"></i> <span>Services</span>
+    </div>
+
+    <div class="section-link">
+      <i class="bi bi-arrow-right-circle"></i>
+      <span>Services</span>
     </div>
 
     <div class="row">
-      <!-- Reusable Card -->
-      <div class="col-md-4 mb-4" *ngFor="let item of [1,2,3,4,5,6]; let i = index">
-        <div class="flip-card" [ngClass]="{'flipped': i === 2}">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
+      <!-- Reusable Card with dynamic content -->
+      <div class="col-md-4 mb-4" *ngFor="let card of cardData; let i = index">
+        <div class="hover-card">
+          <div class="hover-card-inner">
+            <div class="hover-card-front">
               <div class="card-number">/ 0{{ i + 1 }}</div>
               <div class="card-content">
-                <h5>Website Development</h5>
+                <h5>{{ card.title }}</h5>
               </div>
             </div>
-            <div class="flip-card-back">
-              <p>
-                From crafting high-performance websites to building sales-driven Shopify stores and executing data backed digital marketing campaigns, we provide everything you need to grow your brand online.
-              </p>
+            <div class="hover-card-back">
+              <p>{{ card.description }}</p>
               <a href="#" class="learn-more">
-                <i class="bi bi-circle-fill"></i> Learn more
+                <i class="bi bi-arrow-right-circle-fill"></i> Learn more 
               </a>
             </div>
           </div>
@@ -34,5 +36,4 @@
       </div>
     </div>
   </div>
-  
 </section>
