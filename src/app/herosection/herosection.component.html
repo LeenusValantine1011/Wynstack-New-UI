@@ -3,12 +3,14 @@
   <app-dot-grid class="hero-bg"></app-dot-grid>
 
   <div class="hero-content position-relative ">
+    <!-- Desktop Header -->
     <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
-      <h3 class="logo-text text-light ms-4">wynstack</h3>
+      <!-- Desktop Logo -->
+      <h3 class="logo-text text-light ms-4 d-none d-md-flex">wynstack</h3>
 
-      <!-- Navigation -->
-      <nav class="d-none d-lg-flex flex-grow-1 justify-content-center">
-        <ul class="nav nav-cont ">
+      <!-- Desktop Navigation -->
+      <nav class="d-none d-md-flex flex-grow-1 justify-content-center">
+        <ul class="nav nav-cont">
           <li class="nav-item">
             <a class="nav-link link" href="#">Home</a>
           </li>
@@ -24,15 +26,88 @@
         </ul>
       </nav>
 
-      <!-- Button -->
-      <div class="btn-area">
+      <!-- Desktop Button -->
+      <div class="btn-area d-none d-md-flex">
         <a class="connect-btn" href="#">
           Let’s Connect
           <span></span>
         </a>
       </div>
+
+      <!-- Mobile Header -->
+      <div class="d-flex d-md-none w-100 justify-content-between align-items-center px-3">
+        <!-- Mobile Logo -->
+        <h3 class="logo-text text-light mb-0">wynstack</h3>
+
+        <!-- Mobile Hamburger -->
+        <button class="btn btn-outline-light p-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-4"></i>
+        </button>
+      </div>
     </header>
 
+    <!-- Mobile Menu Collapse -->
+    <div class="collapse d-md-none" id="mobileMenu">
+      <div class="p-3 text-center">
+        <a class="connect-btn d-inline-block mt-2" href="#">
+          Let’s Connect
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+
+
+    <!-- Mobile Header -->
+    <header
+      class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0 d-flex d-md-none">
+      <!-- Logo -->
+      <h3 class="logo-text text-light ms-2 mb-0">wynstack</h3>
+
+      <!-- Hamburger Menu -->
+      <div class="dropdown me-3">
+        <button class="btn btn-outline-light px-3 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          ☰
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <a class="dropdown-item connect-btn text-center" href="#">
+              Let’s Connect
+              <span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+
+
+    <!-- Mobile -->
+    <div class="d-flex d-md-none align-items-center gap-2 me-3">
+      <!-- Let’s Connect button inside navbar -->
+      <a class="connect-btn small-btn" href="#">
+        Let’s Connect
+        <span></span>
+      </a>
+
+      <!-- Hamburger menu -->
+      <button class="navbar-toggler border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav content -->
+    <div class="collapse navbar-collapse d-md-none" id="mobileNav">
+      <app-pill-nav [items]="[
+        { label: 'Home', href: '#' },
+        { label: 'Service', href: '#service' },
+        { label: 'About', href: '#about' },
+        { label: 'Contact Us', href: '#contact' }
+      ]" activeHref="#">
+      </app-pill-nav>
+    </div>
     <!-- Hero Text / Left Column -->
     <div class="hero-container container-fluid">
       <div class="row mt-0 align-items-center">
@@ -50,7 +125,8 @@
 
           <!-- Contact Block -->
           <div class="contact-block mt-4">
-            <app-interactive-hover-button [label]="'Contact Us'"></app-interactive-hover-button>
+            <app-interactive-hover-button label="Get Started" [fg]="'#AC99E8'"
+              [bg]="'linear-gradient(90deg, rgba(137,74,255,1) 0%, rgba(78,44,212,1) 100%)'"></app-interactive-hover-button>
             <hr class="divider" />
             <p class="contact-desc">
               We help ambitious brands grow with high-impact websites, sales-driven Shopify
@@ -63,14 +139,11 @@
         <!-- Right column (optional image / animation slot) -->
         <div class="col-lg-6 hero-img d-none d-lg-flex justify-content-end">
           <div class="tilted-wrapper">
-            <app-tilted-card 
-              imageUrl="assets/hero/1611723379.svg" 
-              label="Wynstack" 
-              class="img-fluid">
+            <app-tilted-card imageUrl="assets/hero/1611723379.svg" label="Wynstack" class="img-fluid">
             </app-tilted-card>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>

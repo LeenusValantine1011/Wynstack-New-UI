@@ -1,14 +1,13 @@
 .ihb-btn {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 9999px; /* pill shape */
-    border: 1px solid #ddd;
-    background: #fff;
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 9999px; /* pill shape */
+  background: var(--ihb-bg, #894aff);  /* gradient background */
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
   
   /* Default state */
   .ihb-default {
@@ -21,13 +20,13 @@
   .ihb-dot {
     width: 8px;
     height: 8px;
-    background: #2563eb; /* blue */
+    background: var(--ihb-primary, #34D399); /* different accent color */
     border-radius: 50%;
     transition: transform 0.3s ease;
   }
   
   .ihb-label {
-    color: #000;
+    color: var(--ihb-fg, #AC99E8);  /* text color */
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
@@ -42,7 +41,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: #dc2626; /* red */
+    color: var(--ihb-onPrimary, #fff); /* hover text color (from Input) */
     opacity: 0;
     transform: translateX(12px);
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -67,5 +66,9 @@
   .ihb-btn:hover .ihb-hover {
     transform: translateX(-5px);
     opacity: 1;
+  }
+  
+  .some-class {
+    background: var(--ihb-bg, #894aff);
   }
   

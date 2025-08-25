@@ -1,0 +1,78 @@
+/* ===== Base Container ===== */
+.pill-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* ===== Desktop Menu ===== */
+  .desktop-only {
+    display: none; /* hidden by default (for mobile) */
+  }
+  
+  @media (min-width: 992px) {
+    .desktop-only {
+      display: block !important;
+    }
+  }
+  
+  /* ===== Mobile Menu Button ===== */
+  .mobile-only {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hide hamburger on desktop */
+  @media (min-width: 992px) {
+    .mobile-only {
+      display: none !important;
+    }
+  }
+  
+  /* ===== Mobile Menu Popover ===== */
+  .mobile-menu-popover {
+    position: absolute;
+    top: 60px; /* below header */
+    right: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 12px;
+    padding: 1rem;
+    min-width: 180px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mobile-menu-link {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  
+  .mobile-menu-link:hover {
+    color: #894aff; /* your accent color */
+  }
+  
