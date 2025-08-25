@@ -11,17 +11,20 @@
 }
 
 .underline {
-  width: 1236px; 
-  height: 1px;
-  background-color: white;
+  
+  border: none;
+  border-top: 1px solid rgb(102, 99, 99);
+  background: #4a4a4a;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .section-description {
   max-width: 700px;
   font-size: 1rem;
-  color: #ccc;
   text-align: left;
   margin-top: 1rem;
+  margin-left: 5rem;
 }
 
 .contact-link {
@@ -30,7 +33,8 @@
   gap: 8px;
   color: white;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-left: 5rem;
 }
 
 .contact-link i {
