@@ -14,6 +14,7 @@ import { DotGridComponent } from './dot-grid/dot-grid.component';
 import { PillNavComponent } from './pill-nav/pill-nav.component';
 import { InteractiveHoverButtonComponent } from './interactive-hover-button/interactive-hover-button.component';
 import { TiltedCardComponent } from './tilted-card/tilted-card.component';
+import { FootersectionComponent } from './footersection/footersection.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TiltedCardComponent } from './tilted-card/tilted-card.component';
     DotGridComponent,
     PillNavComponent,
     InteractiveHoverButtonComponent,
+    FootersectionComponent,
   ],
   imports: [
     BrowserModule,

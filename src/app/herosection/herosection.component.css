@@ -192,7 +192,7 @@
   
   .contact-desc {
     font-size: 0.9rem;
-    color: #555;
+    color: #ffffff;
     line-height: 1.6;
     max-width: 500px;
   }
@@ -243,4 +243,30 @@
   }
   
 
+  
+  @media (max-width: 767.98px) {
+    .hero-header .logo-text {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+    .hero-header .connect-btn {
+      font-size: 1rem;
+      padding: 0.45rem 1rem;
+    }
+    .connect-btn{
+      margin-top: 30px;
+      margin-right: 5px;
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+    .hero-header .logo-text {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+    .hero-header .connect-btn {
+      font-size: 1rem;
+      padding: 0.45rem 1rem;
+    }
+  }
   

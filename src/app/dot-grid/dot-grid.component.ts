@@ -28,11 +28,11 @@ export class DotGridComponent implements AfterViewInit, OnDestroy {
   @ViewChild('wrapper', { static: true }) wrapperRef!: ElementRef<HTMLDivElement>;
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  @Input() dotSize = 10;
-  @Input() gap = 20;
+  @Input() dotSize = 3;
+  @Input() gap = 15;
   @Input() baseColor = '#392E4E';
   @Input() activeColor = '#5227FF';
-  @Input() proximity = 190;
+  @Input() proximity = 150;
   @Input() speedTrigger = 100;
   @Input() shockRadius = 250;
   @Input() shockStrength = 5;
