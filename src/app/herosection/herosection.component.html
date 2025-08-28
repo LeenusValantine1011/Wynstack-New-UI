@@ -1,44 +1,49 @@
-<section class="hero-section position-relative">
-  <!-- Background -->
+<section id ="home" class="hero-section position-relative">
   <app-dot-grid class="hero-bg"></app-dot-grid>
 
-  <div class="hero-content position-relative ">
+  <div class="hero-content position-relative">
     <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
-      <h3 class="logo-text text-light ms-4">wynstack</h3>
 
-      <!-- Navigation -->
+      <h3 class="logo-text text-light ms-4 d-none d-lg-flex">wynstack</h3>
+
+      <h3 class="logo-text text-light mb-0 d-flex d-lg-none">wynstack</h3>
       <nav class="d-none d-lg-flex flex-grow-1 justify-content-center">
-        <ul class="nav nav-cont ">
+        <ul class="nav nav-cont">
           <li class="nav-item">
-            <a class="nav-link link" href="#">Home</a>
+            <a class="nav-link link" routerLink="/hero">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Service</a>
+            <a class="nav-link" routerLink="/service">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" routerLink="/abour">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" routerLink="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Button -->
-      <div class="btn-area">
+      <div class="btn-area d-none d-lg-flex">
         <a class="connect-btn" href="#">
           Let’s Connect
           <span></span>
         </a>
       </div>
+
+      <a class="connect-btn d-flex d-lg-none ms-auto" href="#lets_contact">
+        Let’s Connect
+        <span></span>
+      </a>
     </header>
+
 
     <!-- Hero Text / Left Column -->
     <div class="hero-container container-fluid">
       <div class="row mt-0 align-items-center">
         <div class="col-lg-6 hero-text">
           <h1 class="hero-title">
-            <app-decrypted-text [text]="'Build for'" [speed]="100" [delay]="400"
+            <app-decrypted-text [text]="'Built for'" [speed]="100" [delay]="400"
               [characterSet]="'ABCDEFGHIJKLMNOPQR@#*$%!!(#$&%*!(#&$!)@#)$%#*$%@)#$%@#*(%^STUVWXYZ0123456789'">
             </app-decrypted-text>
             <br />
@@ -50,7 +55,8 @@
 
           <!-- Contact Block -->
           <div class="contact-block mt-4">
-            <app-interactive-hover-button [label]="'Contact Us'"></app-interactive-hover-button>
+            <app-interactive-hover-button label="Get Started" [fg]="'#AC99E8'"
+              [bg]="'linear-gradient(90deg, rgba(137,74,255,1) 0%, rgba(78,44,212,1) 100%)'"></app-interactive-hover-button>
             <hr class="divider" />
             <p class="contact-desc">
               We help ambitious brands grow with high-impact websites, sales-driven Shopify
@@ -63,14 +69,11 @@
         <!-- Right column (optional image / animation slot) -->
         <div class="col-lg-6 hero-img d-none d-lg-flex justify-content-end">
           <div class="tilted-wrapper">
-            <app-tilted-card 
-              imageUrl="assets/hero/1611723379.svg" 
-              label="Wynstack" 
-              class="img-fluid">
+            <app-tilted-card imageUrl="assets/hero/1611723379.svg" label="Wynstack" class="img-fluid">
             </app-tilted-card>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
