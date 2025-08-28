@@ -1,5 +1,5 @@
 .footer-section {
-    background: #140c22; /* Match your dark theme */
+    background: #060010; /* Match your dark theme */
     color: #fff;
     border-top: 2px solid #282138;
     font-family: 'Inter', sans-serif;
@@ -17,26 +17,28 @@
   }
   
   .footer-social .social-icon {
+    color: #aaa;
     font-size: 1.3rem;
     transition: color 0.25s;
   }
   .footer-social .social-icon:hover {
-    color: #8d6aff;
+    color: #aaa;
   }
   
   .footer-links .footer-link {
-    color: #bbaace;
+    color: #aaa;
     display: inline-block;
     margin-bottom: 0.5rem;
     text-decoration: none;
     transition: color 0.2s;
   }
   .footer-links .footer-link:hover {
-    color: #8d6aff;
-    text-decoration: underline;
+    color: #fff;
+    text-decoration: none;
   }
   
   .footer-contact {
+    color: #aaa;
     margin-bottom: 0.5rem;
     font-size: 1rem;
     opacity: 0.9;
