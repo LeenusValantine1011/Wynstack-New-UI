@@ -15,6 +15,10 @@ import { PillNavComponent } from './pill-nav/pill-nav.component';
 import { InteractiveHoverButtonComponent } from './interactive-hover-button/interactive-hover-button.component';
 import { TiltedCardComponent } from './tilted-card/tilted-card.component';
 import { FootersectionComponent } from './footersection/footersection.component';
+import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
+import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +34,15 @@ import { FootersectionComponent } from './footersection/footersection.component'
     PillNavComponent,
     InteractiveHoverButtonComponent,
     FootersectionComponent,
+    WebserviceComponent,
+    DigitalmarketingserviceComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TiltedCardComponent
+    TiltedCardComponent,
+    
 ],
   providers: [],
   bootstrap: [AppComponent]

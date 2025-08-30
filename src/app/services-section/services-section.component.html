@@ -27,7 +27,7 @@
             </div>
             <div class="hover-card-back">
               <p>{{ card.description }}</p>
-              <a href="#" class="learn-more">
+              <a [routerLink]="card.routePath"  class="learn-more">
                 <i class="bi bi-arrow-right-circle-fill"></i> Learn more 
               </a>
             </div>

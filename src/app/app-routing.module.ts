@@ -4,6 +4,7 @@ import { HerosectionComponent } from './herosection/herosection.component';
 import { ServicesSectionComponent } from './services-section/services-section.component';
 import { ContactsectionComponent } from './contactsection/contactsection.component';
 import { JourneysectionComponent } from './journeysection/journeysection.component';
+import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'service', component: ServicesSectionComponent},
   { path: 'contact', component: ContactsectionComponent },
   { path: 'about', component: JourneysectionComponent },
+  { path: 'webservice', component: WebserviceComponent },
 ];
 
 @NgModule({
