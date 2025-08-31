@@ -1,5 +1,8 @@
+  
+<div class = "d-none d-md-block service-detail-container service-section">
+   <app-light-ray [moveParticlesOnHover]="true" [particleHoverFactor]="0.05"></app-light-ray>
 
-<div class = "d-none d-md-block service-detail-container">
+  
   <!-- Navbar -->
   <nav class="navbar">
     <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
@@ -93,33 +96,82 @@
           mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
           ullamcorper est. Sed cursus, lectus eu accumsan imperdiet, sapien mi malesuada odio, vestibulum
           malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
-          Curabitur ut tincidunt elit. Aliquam molestie non lectus non rutrum. Integer posuere scelerisque
-          imperdiet. Proin sit amet finibus ligula. Phasellus ac massa magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
-          mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
-          ullamcorper est. Sed cursus, lectus eu accumsan imperdiet, sapien mi malesuada odio, vestibulum
-          malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
-          Curabitur ut tincidunt elit. Aliquam molestie non lectus non rutrum. Integer posuere scelerisque
-          imperdiet. Proin sit amet finibus ligula. Phasellus ac massa magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
-          mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
-          ullamcorper est. Sed cursus, lectus eu accumsan imperdiet, sapien mi malesuada odio, vestibulum
-          malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
-          Curabitur ut tincidunt elit. Aliquam molestie non lectus non rutrum. Integer posuere scelerisque
-          imperdiet. Proin sit amet finibus ligula. Phasellus ac massa magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
-          mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
-          ullamcorper est. Sed cursus, lectus eu accumsan imperdiet, sapien mi malesuada odio, vestibulum
-          malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
-          Curabitur ut tincidunt elit. Aliquam molestie non lectus non rutrum. Integer posuere scelerisque
-          imperdiet. Proin sit amet finibus ligula. Phasellus ac massa magna.
         </p>
         <div class="btn-group">
-          <button class="email-btn">EMAIL</button>
-          <button class="details-btn">GET DETAILS</button>
+          <a class="contact-btn" href="#lets_contact">Contact Us</a>
         </div>
+
       </div>
 
       <div class="image-content">
         <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg" alt="service-img" />
       </div>
+    </div>
+  </div>
+</div>
+<div class="d-block d-md-none service-detail-container service-section">
+  <app-light-ray [moveParticlesOnHover]="true" [particleHoverFactor]="0.05"></app-light-ray>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar">
+    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-2 mb-0 pb-0">
+
+      <h3 class="logo-text text-light mb-0">wynstack</h3>
+
+      <a class="connect-btn" href="#lets_contact">
+        Let’s Connect
+        <span></span>
+      </a>
+
+    </header>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content-mobile container-fluid px-2">
+    <!-- Sidebar (Icons stacked vertically) -->
+    <div class="sidebar-mobile d-flex justify-content-around mb-3">
+      <i class="bi bi-code-slash clickable"
+         (click)="onClick('Website Development')"
+         [class.active]="selectedService === 'Website Development'"></i>
+
+      <i class="bi bi-bag-check clickable"
+         (click)="onClick('Shopify Store Setup')"
+         [class.active]="selectedService === 'Shopify Store Setup'"></i>
+
+      <i class="bi bi-megaphone clickable"
+         (click)="onClick('Digital Marketing')"
+         [class.active]="selectedService === 'Digital Marketing'"></i>
+
+      <i class="bi bi-palette clickable"
+         (click)="onClick('Branding and Creative Design')"
+         [class.active]="selectedService === 'Branding and Creative Design'"></i>
+
+      <i class="bi bi-pencil-square clickable"
+         (click)="onClick('Content Creation')"
+         [class.active]="selectedService === 'Content Creation'"></i>
+
+      <i class="bi bi-mortarboard clickable"
+         (click)="onClick('Student Project Development')"
+         [class.active]="selectedService === 'Student Project Development'"></i>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-content-mobile text-center mb-3">
+      <h2>{{ selectedService || 'Website Development' }}</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
+        mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
+        ullamcorper est. Sed cursus, lectus eu accumsan imperdiet.
+      </p>
+
+      <a class="contact-btn btn btn-primary" href="#lets_contact">Contact Us</a>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-content-mobile text-center">
+      <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg"
+           alt="service-img"
+           class="img-fluid rounded" />
     </div>
   </div>
 </div>

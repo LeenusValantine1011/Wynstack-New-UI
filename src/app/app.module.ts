@@ -18,6 +18,7 @@ import { FootersectionComponent } from './footersection/footersection.component'
 import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
 import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
 import { RouterModule } from '@angular/router';
+import { LightRayComponent } from './light-ray/light-ray.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { RouterModule } from '@angular/router';
     FootersectionComponent,
     WebserviceComponent,
     DigitalmarketingserviceComponent,
+    LightRayComponent,
   
   ],
   imports: [

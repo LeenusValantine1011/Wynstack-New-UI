@@ -302,3 +302,144 @@
     font-family: 'Righteous', sans-serif;
   }
 
+.service-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+  background: #000; /* fallback background */
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* content above light rays */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.contact-btn {
+  display: inline-block;
+  background-color: #ff6600; /* your preferred color */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #e55b00;
+}
+/* Container and background */
+.service-detail-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #0a0a0a; /* fallback background */
+}
+
+/* Light ray particles full screen */
+app-light-ray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Navbar */
+.hero-header {
+  z-index: 10;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.connect-btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.connect-btn:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.05);
+}
+
+/* Sidebar icons */
+.sidebar-mobile i {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-mobile i.active,
+.sidebar-mobile i:hover {
+  color: #ff6b6b;
+  transform: scale(1.2);
+}
+
+/* Text content */
+.text-content-mobile h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.text-content-mobile p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+/* Contact button */
+.contact-btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  background-color: #ff6b6b;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.05);
+}
+
+/* Image content */
+.image-content-mobile img {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Spacing adjustments */
+.content-mobile {
+  position: relative;
+  z-index: 5;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+

@@ -5,6 +5,7 @@ import { ServicesSectionComponent } from './services-section/services-section.co
 import { ContactsectionComponent } from './contactsection/contactsection.component';
 import { JourneysectionComponent } from './journeysection/journeysection.component';
 import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
+import { LightRayComponent } from './light-ray/light-ray.component';
 
 
 const routes: Routes = [
