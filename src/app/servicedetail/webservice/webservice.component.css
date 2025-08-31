@@ -142,7 +142,7 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #ff4d6d; /* poppy pink/red ripple */
+    background-color: #da3c64; /* poppy pink/red ripple */
     transform: translate(-50%, -50%);
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     z-index: -1;
@@ -150,7 +150,7 @@
   
   .connect-btn:hover {
     color: #fff; /* keep white text for contrast */
-    border-color: #ff4d6d; /* match ripple */
+    border-color: #e3dce9; /* match ripple */
   }
   
   .connect-btn:hover span {
@@ -329,7 +329,7 @@
 }
 
 .contact-btn:hover {
-  background-color: #e55b00;
+  background-color: #04114b;
 }
 /* Container and background */
 .service-detail-container {
