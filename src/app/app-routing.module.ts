@@ -5,8 +5,7 @@ import { ServicesSectionComponent } from './services-section/services-section.co
 import { ContactsectionComponent } from './contactsection/contactsection.component';
 import { JourneysectionComponent } from './journeysection/journeysection.component';
 import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
-import { LightRayComponent } from './light-ray/light-ray.component';
-
+import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/hero', pathMatch: 'full' } ,// default route
@@ -15,6 +14,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactsectionComponent },
   { path: 'about', component: JourneysectionComponent },
   { path: 'webservice', component: WebserviceComponent },
+  { path: 'digitalmarketing', component: DigitalmarketingserviceComponent },
+
 ];
 
 @NgModule({

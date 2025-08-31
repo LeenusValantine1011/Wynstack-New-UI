@@ -1,8 +1,4 @@
-  
-<div class = "d-none d-md-block service-detail-container service-section">
-   <app-light-ray [moveParticlesOnHover]="true" [particleHoverFactor]="0.05"></app-light-ray>
-
-  
+<div class="d-none d-md-block service-detail-container service-section">
   <!-- Navbar -->
   <nav class="navbar">
     <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
@@ -33,7 +29,6 @@
           <span></span>
         </a>
       </div>
-    
 
       <a class="connect-btn d-flex d-lg-none ms-auto" href="#lets_contact">
         Let’s Connect
@@ -41,55 +36,59 @@
       </a>
     </header>
   </nav>
+<!-- Back Button -->
+<button class="btn btn-outline-light mt-3 ms-4" onclick="history.back()">⬅ Back</button>
+
 
   <!-- Main Content -->
   <div class="content">
+    
     <!-- Left Sidebar -->
     <div class="sidebar">
-
-<ul>
-  <li>
-    <i class="bi bi-code-slash clickable"
-       (click)="onClick('Website Development')"
-       [class.active]="selectedService === 'Website Development'"></i>
-  </li>
-
-  <li>
-    <i class="bi bi-bag-check clickable"
-       (click)="onClick('Shopify Store Setup')"
-       [class.active]="selectedService === 'Shopify Store Setup'"></i>
-  </li>
-
-  <li>
-    <i class="bi bi-megaphone clickable"
-       (click)="onClick('Digital Marketing')"
-       [class.active]="selectedService === 'Digital Marketing'"></i>
-  </li>
-
-  <li>
-    <i class="bi bi-palette clickable"
-       (click)="onClick('Branding and Creative Design')"
-       [class.active]="selectedService === 'Branding and Creative Design'"></i>
-  </li>
-
-  <li>
-    <i class="bi bi-pencil-square clickable"
-       (click)="onClick('Content Creation')"
-       [class.active]="selectedService === 'Content Creation'"></i>
-  </li>
-
-  <li>
-    <i class="bi bi-mortarboard clickable"
-       (click)="onClick('Student Project Development')"
-       [class.active]="selectedService === 'Student Project Development'"></i>
-  </li>
-</ul>
-</div>
+      
+      <ul>
+        <li>
+          <i class="bi bi-code-slash clickable" title="Website Development"
+             (click)="onClick('Website Development')"
+             [class.active]="selectedService === 'Website Development'"></i>
+        </li>
+        <li>
+          <i class="bi bi-bag-check clickable" title="Shopify Store Setup"
+             (click)="onClick('Shopify Store Setup')"
+             [class.active]="selectedService === 'Shopify Store Setup'"></i>
+        </li>
+        <li>
+          <i class="bi bi-megaphone clickable" title="Digital Marketing"
+             (click)="onClick('Digital Marketing')"
+             [class.active]="selectedService === 'Digital Marketing'"></i>
+        </li>
+        <li>
+          <i class="bi bi-palette clickable" title="Branding and Creative Design"
+             (click)="onClick('Branding and Creative Design')"
+             [class.active]="selectedService === 'Branding and Creative Design'"></i>
+        </li>
+        <li>
+          <i class="bi bi-pencil-square clickable" title="Content Creation"
+             (click)="onClick('Content Creation')"
+             [class.active]="selectedService === 'Content Creation'"></i>
+        </li>
+        <li>
+          <i class="bi bi-mortarboard clickable" title="Student Project Development"
+             (click)="onClick('Student Project Development')"
+             [class.active]="selectedService === 'Student Project Development'"></i>
+        </li>
+      </ul>
+    </div>
+    
 
     <!-- Text + Image Section -->
     <div class="main-section">
+      
       <div class="text-content">
-        <h1>Website Development</h1>
+       
+        <!-- Heading aligned left -->
+        <h1 class="text-start">Website Development</h1>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
           mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
@@ -99,41 +98,38 @@
         <div class="btn-group">
           <a class="contact-btn" href="#lets_contact">Contact Us</a>
         </div>
-
       </div>
 
       <div class="image-content">
-        <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg" alt="service-img" />
+        <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg"
+             alt="service-img" />
       </div>
     </div>
   </div>
 </div>
+
 <div class="d-block d-md-none service-detail-container service-section">
-  <app-light-ray [moveParticlesOnHover]="true" [particleHoverFactor]="0.05"></app-light-ray>
-
-
-
-
-
   
   <!-- Mobile Navbar -->
   <nav class="navbar">
     <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-2 mb-0 pb-0">
 
-      <h3 class="logo-text text-light mb-0">wynstack</h3>
+      <!-- Logo -->
+      <h3 class="logo-text text-light mb-0 ms-2">wynstack</h3>
 
-      <a class="connect-btn" href="#lets_contact">
+      <!-- Connect Button -->
+      <a class="connect-btn ms-3" href="#lets_contact">
         Let’s Connect
         <span></span>
       </a>
-
     </header>
   </nav>
 
   <!-- Main Content -->
   <div class="content-mobile container-fluid px-2">
-    <!-- Sidebar (Icons stacked vertically) -->
-    <div class="sidebar-mobile d-flex justify-content-around mb-3">
+    
+    <!-- Sidebar (Icons stacked horizontally, can change to vertical if needed) -->
+    <div class="sidebar-mobile d-flex justify-content-around mb-3 flex-wrap">
       <i class="bi bi-code-slash clickable"
          (click)="onClick('Website Development')"
          [class.active]="selectedService === 'Website Development'"></i>

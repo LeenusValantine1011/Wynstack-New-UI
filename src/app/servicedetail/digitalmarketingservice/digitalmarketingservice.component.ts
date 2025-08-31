@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./digitalmarketingservice.component.css']
 })
 export class DigitalmarketingserviceComponent {
+  selectedService: string = 'Digital Marketing'; // default value
 
+  onClick(service: string) {
+    this.selectedService = service;  // update when user clicks
+  }
 }
+
+

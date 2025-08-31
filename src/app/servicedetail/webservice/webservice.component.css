@@ -125,7 +125,7 @@
     border: 0.5px solid #ffffff;
     border-radius: 20px;
     background: transparent;
-    padding: 8px 22px;
+    padding: 8px 10px;
     font-weight: 500;
     color: #fff;
     transition: color 0.3s ease;
@@ -133,7 +133,7 @@
     z-index: 1;
     text-decoration: none; /* removes underline */
     margin-top: 20px;
-    margin-right: 25px;
+    margin-right: 8px;
   }
   
   .connect-btn span {
@@ -142,7 +142,7 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #da3c64; /* poppy pink/red ripple */
+    background-color: #420232; /* poppy pink/red ripple */
     transform: translate(-50%, -50%);
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     z-index: -1;
@@ -319,7 +319,7 @@
 }
 .contact-btn {
   display: inline-block;
-  background-color: #ff6600; /* your preferred color */
+  background-color: #0a0a0a; /* your preferred color */
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
@@ -363,7 +363,7 @@ app-light-ray {
 }
 
 .connect-btn {
-  background-color: #ff6b6b;
+  background-color: #0f0f0f;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 25px;
@@ -413,15 +413,15 @@ app-light-ray {
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.5rem 1.2rem;
+  padding:8px 10px;
   border-radius: 25px;
-  background-color: #ff6b6b;
+  background-color: #4110b6;
   color: #fff;
   transition: 0.3s;
 }
 
 .contact-btn:hover {
-  background-color: #ff4b4b;
+  background-color: #0a0101;
   transform: scale(1.05);
 }
 
@@ -442,4 +442,27 @@ app-light-ray {
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
+/* Space between wynstack logo and connect button */
+.hero-header {
+  padding: 0.5rem 1rem; /* already some padding */
+}
+
+.hero-header .logo-text {
+  margin-right: auto; /* push connect button to the right */
+  font-size: 1.25rem; /* optional: adjust font size */
+}
+
+.hero-header .connect-btn {
+  margin-left: 20px; /* extra spacing if needed */
+  font-size: 0.9rem; /* optional: make it a bit smaller */
+}
+
+/* Reduce icon size in sidebar */
+.sidebar-mobile i {
+  font-size: 1.5rem; /* default ~2rem, reduce it */
+  margin: 5px 10px; /* spacing between icons */
+  cursor: pointer;
+}
+
+
 

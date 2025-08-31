@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./webservice.component.css'],
 })
 export class WebserviceComponent {
+goBack() {
+throw new Error('Method not implemented.');
+}
   selectedService: string | null = null;
 
   onClick(service: string) {
@@ -13,4 +16,5 @@ export class WebserviceComponent {
     console.log(`${service} clicked!`);
   }
 }
+
 
