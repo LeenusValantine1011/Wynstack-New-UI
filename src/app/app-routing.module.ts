@@ -6,6 +6,10 @@ import { ContactsectionComponent } from './contactsection/contactsection.compone
 import { JourneysectionComponent } from './journeysection/journeysection.component';
 import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
 import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
+import { BrandingComponent } from './servicedetail/branding/branding.component';
+import { ShopifystoreComponent } from './servicedetail/shopifystore/shopifystore.component';
+import { ContentcreationComponent } from './servicedetail/contentcreation/contentcreation.component';
+import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/hero', pathMatch: 'full' } ,// default route
@@ -15,6 +19,10 @@ const routes: Routes = [
   { path: 'about', component: JourneysectionComponent },
   { path: 'webservice', component: WebserviceComponent },
   { path: 'digitalmarketing', component: DigitalmarketingserviceComponent },
+  { path: 'branding', component: BrandingComponent },
+  { path: 'shopifystore', component: ShopifystoreComponent },
+  { path: 'contentcreation', component: ContentcreationComponent },
+  { path: 'studentproject', component: StudentprojectComponent },
 
 ];
 

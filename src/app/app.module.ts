@@ -18,6 +18,10 @@ import { FootersectionComponent } from './footersection/footersection.component'
 import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
 import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
 import { RouterModule } from '@angular/router';
+import { ShopifystoreComponent } from './servicedetail/shopifystore/shopifystore.component';
+import { BrandingComponent } from './servicedetail/branding/branding.component';
+import { ContentcreationComponent } from './servicedetail/contentcreation/contentcreation.component';
+import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
 
 
 @NgModule({
@@ -36,6 +40,10 @@ import { RouterModule } from '@angular/router';
     FootersectionComponent,
     WebserviceComponent,
     DigitalmarketingserviceComponent,
+    ShopifystoreComponent,
+    BrandingComponent,
+    ContentcreationComponent,
+    StudentprojectComponent,
   
   ],
   imports: [
