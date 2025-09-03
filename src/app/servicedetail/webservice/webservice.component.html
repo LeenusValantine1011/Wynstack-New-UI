@@ -68,43 +68,44 @@
 <div class="d-block d-md-none service-detail-container service-section">
 
   <!-- Mobile Navbar -->
-  <nav class="navbar">
-    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-2 mb-0 pb-0">
-
-      <!-- Logo -->
-      <h3 class="logo-text text-light mb-0 ms-2">wynstack</h3>
-
-      <!-- Connect Button -->
-      <a class="connect-btn ms-3" href="#lets_contact">
-        Let’s Connect
-        <span></span>
-      </a>
-    </header>
-  </nav>
+<app-top-nav></app-top-nav>
 
   <!-- Main Content -->
-  <div class="content-mobile container-fluid px-2">
+  <!-- Mobile Only -->
+<!-- Mobile Only -->
+<div class="d-block d-md-none mobile-nav">
+  <nav class="mobile-menu d-flex justify-content-around align-items-center py-2">
 
-    <!-- Sidebar (Icons stacked horizontally, can change to vertical if needed) -->
-    <div class="sidebar-mobile d-flex justify-content-around mb-3 flex-wrap">
-      <i class="bi bi-code-slash clickable" (click)="onClick('Website Development')"
-        [class.active]="selectedService === 'Website Development'"></i>
+    <a [routerLink]="'/web-services'" routerLinkActive="active">
+      <i class="bi bi-code-slash" title="Website Development"></i>
+    </a>
 
-      <i class="bi bi-bag-check clickable" (click)="onClick('Shopify Store Setup')"
-        [class.active]="selectedService === 'Shopify Store Setup'"></i>
+    <a [routerLink]="'/shopify-store'" routerLinkActive="active">
+      <i class="bi bi-bag-check" title="Shopify Store Setup"></i>
+    </a>
 
-      <i class="bi bi-megaphone clickable" (click)="onClick('Digital Marketing')"
-        [class.active]="selectedService === 'Digital Marketing'"></i>
+    <a [routerLink]="'/digital-marketing'" routerLinkActive="active">
+      <i class="bi bi-megaphone" title="Digital Marketing"></i>
+    </a>
 
-      <i class="bi bi-palette clickable" (click)="onClick('Branding and Creative Design')"
-        [class.active]="selectedService === 'Branding and Creative Design'"></i>
+    <a [routerLink]="'/branding'" routerLinkActive="active">
+      <i class="bi bi-palette" title="Branding and Creative Design"></i>
+    </a>
 
-      <i class="bi bi-pencil-square clickable" (click)="onClick('Content Creation')"
-        [class.active]="selectedService === 'Content Creation'"></i>
+    <a [routerLink]="'/content-creation'" routerLinkActive="active">
+      <i class="bi bi-pencil-square" title="Content Creation"></i>
+    </a>
 
-      <i class="bi bi-mortarboard clickable" (click)="onClick('Student Project Development')"
-        [class.active]="selectedService === 'Student Project Development'"></i>
-    </div>
+    <a [routerLink]="'/student-project'" routerLinkActive="active">
+      <i class="bi bi-mortarboard" title="Student Project Development"></i>
+    </a>
+
+  </nav>
+
+
+
+
+
 
     <!-- Text Section -->
     <div class="text-content-mobile text-center mb-3">

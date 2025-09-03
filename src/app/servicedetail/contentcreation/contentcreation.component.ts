@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./contentcreation.component.css']
 })
 export class ContentcreationComponent {
+  selectedService: string = 'Content Creation';  // default service
 
+  onClick(service: string) {
+    this.selectedService = service;  // update when user clicks
+  }
 }
