@@ -15,6 +15,14 @@ import { PillNavComponent } from './pill-nav/pill-nav.component';
 import { InteractiveHoverButtonComponent } from './interactive-hover-button/interactive-hover-button.component';
 import { TiltedCardComponent } from './tilted-card/tilted-card.component';
 import { FootersectionComponent } from './footersection/footersection.component';
+import { WebserviceComponent } from './servicedetail/webservice/webservice.component';
+import { DigitalmarketingserviceComponent } from './servicedetail/digitalmarketingservice/digitalmarketingservice.component';
+import { RouterModule } from '@angular/router';
+import { ShopifystoreComponent } from './servicedetail/shopifystore/shopifystore.component';
+import { BrandingComponent } from './servicedetail/branding/branding.component';
+import { ContentcreationComponent } from './servicedetail/contentcreation/contentcreation.component';
+import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +38,19 @@ import { FootersectionComponent } from './footersection/footersection.component'
     PillNavComponent,
     InteractiveHoverButtonComponent,
     FootersectionComponent,
+    WebserviceComponent,
+    DigitalmarketingserviceComponent,
+    ShopifystoreComponent,
+    BrandingComponent,
+    ContentcreationComponent,
+    StudentprojectComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TiltedCardComponent
+    TiltedCardComponent,
+    
 ],
   providers: [],
   bootstrap: [AppComponent]

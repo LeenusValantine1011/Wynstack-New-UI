@@ -1,0 +1,178 @@
+<div class="d-none d-md-block service-detail-container service-section">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
+
+      <h3 class="logo-text text-light ms-4 d-none d-lg-flex">wynstack</h3>
+
+      <h3 class="logo-text text-light mb-0 d-flex d-lg-none">wynstack</h3>
+      <nav class="d-none d-lg-flex flex-grow-1 justify-content-center">
+        <ul class="nav nav-cont">
+          <li class="nav-item">
+            <a class="nav-link link" routerLink="/hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/service">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/abour">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="btn-area d-none d-lg-flex">
+        <a class="connect-btn" href="#">
+          Let’s Connect
+          <span></span>
+        </a>
+      </div>
+
+      <a class="connect-btn d-flex d-lg-none ms-auto" href="#lets_contact">
+        Let’s Connect
+        <span></span>
+      </a>
+    </header>
+  </nav>
+<!-- Back Button -->
+<button class="btn btn-outline-light mt-3 ms-4" onclick="history.back()">⬅ Back</button>
+
+
+  <!-- Main Content -->
+  <div class="content">
+    
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      
+      <ul>
+        <li>
+          <i class="bi bi-code-slash clickable" title="Website Development"
+             (click)="onClick('Website Development')"
+             [class.active]="selectedService === 'Website Development'"></i>
+        </li>
+        <li>
+          <i class="bi bi-bag-check clickable" title="Shopify Store Setup"
+             (click)="onClick('Shopify Store Setup')"
+             [class.active]="selectedService === 'Shopify Store Setup'"></i>
+        </li>
+        <li>
+          <i class="bi bi-megaphone clickable" title="Digital Marketing"
+             (click)="onClick('Digital Marketing')"
+             [class.active]="selectedService === 'Digital Marketing'"></i>
+        </li>
+        <li>
+          <i class="bi bi-palette clickable" title="Branding and Creative Design"
+             (click)="onClick('Branding and Creative Design')"
+             [class.active]="selectedService === 'Branding and Creative Design'"></i>
+        </li>
+        <li>
+          <i class="bi bi-pencil-square clickable" title="Content Creation"
+             (click)="onClick('Content Creation')"
+             [class.active]="selectedService === 'Content Creation'"></i>
+        </li>
+        <li>
+          <i class="bi bi-mortarboard clickable" title="Student Project Development"
+             (click)="onClick('Student Project Development')"
+             [class.active]="selectedService === 'Student Project Development'"></i>
+        </li>
+      </ul>
+    </div>
+    
+
+    <!-- Text + Image Section -->
+    <div class="main-section">
+      
+      <div class="text-content">
+       
+        <!-- Heading aligned left -->
+        <h1 class="text-start">Digital Marketing</h1>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
+          mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
+          ullamcorper est. Sed cursus, lectus eu accumsan imperdiet, sapien mi malesuada odio, vestibulum
+          malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
+        </p>
+        <div class="btn-group">
+          <a class="contact-btn" href="#lets_contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="image-content">
+        <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg"
+             alt="service-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-block d-md-none service-detail-container service-section">
+  
+  <!-- Mobile Navbar -->
+  <nav class="navbar">
+    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-2 mb-0 pb-0">
+
+      <!-- Logo -->
+      <h3 class="logo-text text-light mb-0 ms-2">wynstack</h3>
+
+      <!-- Connect Button -->
+      <a class="connect-btn ms-3" href="#lets_contact">
+        Let’s Connect
+        <span></span>
+      </a>
+    </header>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content-mobile container-fluid px-2">
+    
+    <!-- Sidebar (Icons stacked horizontally, can change to vertical if needed) -->
+    <div class="sidebar-mobile d-flex justify-content-around mb-3 flex-wrap">
+      <i class="bi bi-code-slash clickable"
+         (click)="onClick('Website Development')"
+         [class.active]="selectedService === 'Website Development'"></i>
+
+      <i class="bi bi-bag-check clickable"
+         (click)="onClick('Shopify Store Setup')"
+         [class.active]="selectedService === 'Shopify Store Setup'"></i>
+
+      <i class="bi bi-megaphone clickable"
+         (click)="onClick('Digital Marketing')"
+         [class.active]="selectedService === 'Digital Marketing'"></i>
+
+      <i class="bi bi-palette clickable"
+         (click)="onClick('Branding and Creative Design')"
+         [class.active]="selectedService === 'Branding and Creative Design'"></i>
+
+      <i class="bi bi-pencil-square clickable"
+         (click)="onClick('Content Creation')"
+         [class.active]="selectedService === 'Content Creation'"></i>
+
+      <i class="bi bi-mortarboard clickable"
+         (click)="onClick('Student Project Development')"
+         [class.active]="selectedService === 'Student Project Development'"></i>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-content-mobile text-center mb-3">
+      <h2>{{ selectedService || 'Digital Marketing' }}</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
+        mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
+        ullamcorper est. Sed cursus, lectus eu accumsan imperdiet.
+      </p>
+
+      <a class="contact-btn btn btn-primary" href="#lets_contact">Contact Us</a>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-content-mobile text-center">
+      <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg"
+           alt="service-img"
+           class="img-fluid rounded" />
+    </div>
+  </div>
+</div>
+
