@@ -22,6 +22,7 @@ import { ShopifystoreComponent } from './servicedetail/shopifystore/shopifystore
 import { BrandingComponent } from './servicedetail/branding/branding.component';
 import { ContentcreationComponent } from './servicedetail/contentcreation/contentcreation.component';
 import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
+import { TopNavComponent } from './top-nav/top-nav.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { StudentprojectComponent } from './servicedetail/studentproject/studentp
     BrandingComponent,
     ContentcreationComponent,
     StudentprojectComponent,
+    TopNavComponent,
   
   ],
   imports: [

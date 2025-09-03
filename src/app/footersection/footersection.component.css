@@ -64,3 +64,44 @@
     }
   }
   
+
+
+
+
+.hero-header .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0 8px;
+}
+@media (max-width: 767.98px) {
+    .hero-header .logo-text {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+    .hero-header .connect-btn {
+      font-size: 1rem;
+      padding: 0.45rem 1rem;
+    }
+    .connect-btn{
+      margin-top: 30px;
+      margin-right: 5px;
+    }
+  }
+@media (max-width: 991.98px) {
+    .hero-header .logo-text {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+    .hero-header .connect-btn {
+      font-size: 1rem;
+      padding: 0.45rem 1rem;
+    }
+  }
+
+
+.logo-text {
+  margin-top: 35px;
+  margin-left: 25px;
+  font-family: 'Righteous', sans-serif;
+
+}
