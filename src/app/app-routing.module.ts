@@ -12,17 +12,17 @@ import { ContentcreationComponent } from './servicedetail/contentcreation/conten
 import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/hero', pathMatch: 'full' } ,// default route
+  { path: '', redirectTo: '/hero', pathMatch: 'full' } ,
   { path: 'hero', component: HerosectionComponent },
   { path: 'service', component: ServicesSectionComponent},
   { path: 'contact', component: ContactsectionComponent },
   { path: 'about', component: JourneysectionComponent },
-  { path: 'webservice', component: WebserviceComponent },
-  { path: 'digitalmarketing', component: DigitalmarketingserviceComponent },
+  { path: 'web-services', component: WebserviceComponent },
+  { path: 'digital-marketing', component: DigitalmarketingserviceComponent },
   { path: 'branding', component: BrandingComponent },
-  { path: 'shopifystore', component: ShopifystoreComponent },
-  { path: 'contentcreation', component: ContentcreationComponent },
-  { path: 'studentproject', component: StudentprojectComponent },
+  { path: 'shopify-store', component: ShopifystoreComponent },
+  { path: 'content-creation', component: ContentcreationComponent },
+  { path: 'student-project', component: StudentprojectComponent },
 
 ];
 
