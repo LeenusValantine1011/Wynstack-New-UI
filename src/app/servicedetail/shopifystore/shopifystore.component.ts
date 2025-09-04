@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopifystore.component.css']
 })
 export class ShopifystoreComponent {
-  selectedService: string = '';
+  selectedService: string = 'Shopify Store Setup';
 
   onClick(service: string) {
     this.selectedService = service;

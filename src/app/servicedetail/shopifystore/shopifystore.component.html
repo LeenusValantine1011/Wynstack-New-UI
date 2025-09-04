@@ -2,7 +2,7 @@
   <!-- Navbar -->
   <app-top-nav></app-top-nav>
 <!-- Back Button -->
-<button class="btn btn-outline-light mt-3 ms-4" onclick="history.back()">⬅ Back</button>
+<button class="btn btn-outline-light mt-3 ms-4" routerLink="">⬅ Back</button>
 
 
   <!-- Main Content -->
@@ -46,7 +46,7 @@
       <div class="text-content">
        
         <!-- Heading aligned left -->
-        <h1 class="text-start">Shopify Store Setup</h1>
+        <h1 class="text-start">Shopify store setup</h1>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
@@ -55,7 +55,7 @@
           malesuada augue ex ac elit. Integer placerat orci erat, sit amet ullamcorper risus bibendum at.
         </p>
         <div class="btn-group">
-          <a class="contact-btn" href="#lets_contact">Contact Us</a>
+          <a class="contact-btn" routerLink="/contact">Contact Us</a>
         </div>
       </div>
 
@@ -68,62 +68,40 @@
 </div>
 
 <div class="d-block d-md-none service-detail-container service-section">
+
+  <app-top-nav></app-top-nav>
   
-  <!-- Mobile Navbar -->
-  <nav class="navbar">
-    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-2 mb-0 pb-0">
-
-      <!-- Logo -->
-      <h3 class="logo-text text-light mb-0 ms-2">wynstack</h3>
-
-      <!-- Connect Button -->
-      <a class="connect-btn ms-3" href="#lets_contact">
-        Let’s Connect
-        <span></span>
-      </a>
-    </header>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="content-mobile container-fluid px-2">
-    
-    <!-- Sidebar (Icons stacked horizontally, can change to vertical if needed) -->
-    <div class="sidebar-mobile d-flex justify-content-around mb-3 flex-wrap">
-      <i class="bi bi-code-slash clickable"
-         (click)="onClick('Website Development')"
-         [class.active]="selectedService === 'Website Development'"></i>
-
-      <i class="bi bi-bag-check clickable"
-         (click)="onClick('Shopify Store Setup')"
-         [class.active]="selectedService === 'Shopify Store Setup'"></i>
-
-      <i class="bi bi-megaphone clickable"
-         (click)="onClick('Digital Marketing')"
-         [class.active]="selectedService === 'Digital Marketing'"></i>
-
-      <i class="bi bi-palette clickable"
-         (click)="onClick('Branding and Creative Design')"
-         [class.active]="selectedService === 'Branding and Creative Design'"></i>
-
-      <i class="bi bi-pencil-square clickable"
-         (click)="onClick('Content Creation')"
-         [class.active]="selectedService === 'Content Creation'"></i>
-
-      <i class="bi bi-mortarboard clickable"
-         (click)="onClick('Student Project Development')"
-         [class.active]="selectedService === 'Student Project Development'"></i>
-    </div>
+  <div class="d-block d-md-none mobile-nav content-mobile container-fluid px-2 " >
+    <div class="sidebar-mobile d-flex justify-content-around mb-3 mt-3 flex-wrap">
+      <i class="bi bi-code-slash clickable" routerLink="/web-services"
+        [class.active]="selectedService === 'Website Development'"></i>
+  
+      <i class="bi bi-bag-check clickable" routerLink="/shopify-store"
+        [class.active]="selectedService === 'Shopify Store Setup'"></i>
+  
+      <i class="bi bi-megaphone clickable" routerLink="/digital-marketing"
+        [class.active]="selectedService === 'Digital Marketing'"></i>
+  
+      <i class="bi bi-palette clickable" routerLink="/branding"
+        [class.active]="selectedService === 'Branding and Creative Design'"></i>
+  
+      <i class="bi bi-pencil-square clickable" routerLink="/content-creation"
+        [class.active]="selectedService === 'Content Creation'"></i>
+  
+      <i class="bi bi-mortarboard clickable" routerLink="/student-project"
+        [class.active]="selectedService === 'Student Project Development'"></i>
+    </div>  
 
     <!-- Text Section -->
     <div class="text-content-mobile text-center mb-3">
-      <h2>{{ selectedService || 'Shopify Store Setup' }}</h2>
+      <h2>Shopify Store Setup</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
         mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
         ullamcorper est. Sed cursus, lectus eu accumsan imperdiet.
       </p>
 
-      <a class="contact-btn btn btn-primary" href="#lets_contact">Contact Us</a>
+      <a class="contact-btn btn btn-primary" routerLink="/contact">Contact Us</a>
     </div>
 
     <!-- Image Section -->
@@ -134,3 +112,6 @@
     </div>
   </div>
 </div>
+
+
+<app-footersection></app-footersection>
