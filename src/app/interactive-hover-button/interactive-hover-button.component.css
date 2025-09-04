@@ -20,13 +20,13 @@
   .ihb-dot {
     width: 8px;
     height: 8px;
-    background: var(--ihb-primary, #34D399); /* different accent color */
+    background: var(--ihb-primary, #ffffff) !important; /* different accent color */
     border-radius: 50%;
     transition: transform 0.3s ease;
   }
   
   .ihb-label {
-    color: var(--ihb-fg, #AC99E8);  /* text color */
+    color: var(--ihb-fg, #ece6ff);  /* text color */
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   
