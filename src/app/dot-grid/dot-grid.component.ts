@@ -28,9 +28,9 @@ export class DotGridComponent implements AfterViewInit, OnDestroy {
   @ViewChild('wrapper', { static: true }) wrapperRef!: ElementRef<HTMLDivElement>;
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  @Input() dotSize = 16;
-  @Input() gap = 32;
-  @Input() baseColor = '#AAAAAA';
+  @Input() dotSize = 3;
+  @Input() gap = 15;
+  @Input() baseColor = '#392E4E';
   @Input() activeColor = '#5227FF';
   @Input() proximity = 150;
   @Input() speedTrigger = 100;

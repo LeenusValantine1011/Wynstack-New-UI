@@ -1,5 +1,5 @@
 .services-section {
-  background-color: #1E1D20;
+  background-color: #060010;
   padding: 3rem 1rem;
   color: white;
 }
@@ -133,4 +133,27 @@
 
 .learn-more i {
   font-size: 1.5rem;
+}
+/* By default, front is on top */
+.hover-card-front {
+  z-index: 2;
+}
+
+.hover-card-back {
+  z-index: 1;
+  pointer-events: none; /* disabled until visible */
+}
+
+/* On hover, back comes to front */
+.hover-card:hover .hover-card-front {
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none; /* prevent blocking */
+}
+
+.hover-card:hover .hover-card-back {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+  pointer-events: auto; /* enable button clicks */
 }

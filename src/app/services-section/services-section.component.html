@@ -1,4 +1,4 @@
-<section class="services-section text-white py-5 px-3"> 
+<section id="service" class="services-section text-white py-5 px-3"> 
   <div class="container">
     <h2 class="section-title mb-2">How can Wynstack Help?</h2>
     <hr class="section-underline">
@@ -9,7 +9,7 @@
       </p>
     </div>
 
-    <div class="section-link">
+    <div routerLink="/web-services" class="section-link">
       <i class="bi bi-arrow-right-circle"></i>
       <span>Services</span>
     </div>
@@ -27,7 +27,7 @@
             </div>
             <div class="hover-card-back">
               <p>{{ card.description }}</p>
-              <a href="#" class="learn-more">
+              <a [routerLink]="card.routePath"  class="learn-more">
                 <i class="bi bi-arrow-right-circle-fill"></i> Learn more 
               </a>
             </div>
