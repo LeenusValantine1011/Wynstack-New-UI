@@ -2,41 +2,7 @@
   <app-dot-grid class="hero-bg"></app-dot-grid>
 
   <div class="hero-content position-relative">
-    <header class="hero-header container-fluid d-flex align-items-center justify-content-between py-3 mb-0 pb-0">
-
-      <h3 class="logo-text text-light ms-4 d-none d-lg-flex">wynstack</h3>
-
-      <h3 class="logo-text text-light mb-0 d-flex d-lg-none">wynstack</h3>
-      <nav class="d-none d-lg-flex flex-grow-1 justify-content-center">
-        <ul class="nav nav-cont">
-          <li class="nav-item">
-            <a class="nav-link link" routerLink="/hero">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/service">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/abour">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="btn-area d-none d-lg-flex">
-        <a class="connect-btn" href="#">
-          Let’s Connect
-          <span></span>
-        </a>
-      </div>
-
-      <a class="connect-btn d-flex d-lg-none ms-auto" href="#lets_contact">
-        Let’s Connect
-        <span></span>
-      </a>
-    </header>
-
+<app-top-nav></app-top-nav>
 
     <!-- Hero Text / Left Column -->
     <div class="hero-container container-fluid">
@@ -55,7 +21,7 @@
 
           <!-- Contact Block -->
           <div class="contact-block mt-4">
-            <app-interactive-hover-button label="Get Started" [fg]="'#AC99E8'"
+            <app-interactive-hover-button routerLink="/web-services" label="Get Started" [fg]="'#AC99E8'"
               [bg]="'linear-gradient(90deg, rgba(137,74,255,1) 0%, rgba(78,44,212,1) 100%)'"></app-interactive-hover-button>
             <hr class="divider" />
             <p class="contact-desc">
@@ -78,3 +44,8 @@
     </div>
   </div>
 </section>
+
+<app-clientele></app-clientele>
+<app-services-section></app-services-section>
+<app-journeysection></app-journeysection>
+<app-contactsection></app-contactsection>
