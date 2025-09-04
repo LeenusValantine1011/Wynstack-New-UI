@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./studentproject.component.css']
 })
 export class StudentprojectComponent {
-  selectedService: string = '';
+  selectedService: string = 'Student Project Development';
 
   onClick(service: string) {
     this.selectedService = service;

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./branding.component.css']
 })
 export class BrandingComponent {
-  selectedService: string = '';
+  selectedService: string = 'Branding and Creative Design';
 
   onClick(service: string) {
     this.selectedService = service;

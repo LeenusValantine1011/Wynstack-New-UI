@@ -6,14 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./webservice.component.css'],
 })
 export class WebserviceComponent {
-goBack() {
-throw new Error('Method not implemented.');
-}
-  selectedService: string | null = null;
+  selectedService: string = 'Website Development'; // default value
 
   onClick(service: string) {
-    this.selectedService = service;
-    console.log(`${service} clicked!`);
+    this.selectedService = service;  // update when user clicks
   }
 }
 
