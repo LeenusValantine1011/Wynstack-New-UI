@@ -50,9 +50,9 @@
 }
 
 .journey-image {
-  width: 400px;
-  height: 200px;
+  width: 350px;
+  height: 275px;
+  
   object-fit: contain;
-  border: 1px solid #3b82f6; /* blue-500 */
-  padding: 0.5rem;
+  
 }
