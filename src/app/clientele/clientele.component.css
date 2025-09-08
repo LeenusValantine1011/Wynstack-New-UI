@@ -1,5 +1,5 @@
 .clients-section {
-  background-color: #060010;
+  background-color: #1E1D20;
   padding: 3rem 1rem;
   color: white;
 }
@@ -14,17 +14,20 @@
   
   border: none;
   border-top: 1px solid rgb(102, 99, 99);
-  background: #4a4a4a;
+  background: #1E1D20;
   width: 100%;
   margin-bottom: 1.5rem;
 }
 
 .section-description {
   max-width: 700px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 200;
   text-align: left;
   margin-top: 1rem;
-  margin-left: 5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-left: 4rem;
+  color: #c8c8c8;
 }
 
 .contact-link {
@@ -34,7 +37,7 @@
   color: white;
   cursor: pointer;
   font-size: 1rem;
-  margin-left: 5rem;
+  margin-left: 4rem;
 }
 
 .contact-link i {
@@ -43,6 +46,10 @@
 
 .contact-link:hover {
   color: #cccccc;
+}
+
+.bi-arrow-right-circle{
+  color: #9CE266;
 }
 
 /* Scrolling */
@@ -61,16 +68,29 @@
 
 .client-box {
   min-width: 200px;
+  max-width: 200px;
   height: 100px;
   border: 2px solid #fff;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  white-space: nowrap;
+  background: transparent;
+  box-sizing: border-box;
+  overflow: hidden; 
+  padding: 0;
 }
+
+.client-box img {
+  max-width: 90%;        
+  max-height: 90%;   
+  width: auto;          
+  height: auto;         
+  object-fit: contain;   
+  display: block;
+  margin: 0 auto;
+}
+
 
 /* Seamless scroll effect */
 @keyframes scroll-track {
@@ -104,13 +124,14 @@
   .contact-link i {
     font-size: 1.2rem;
   }
+  .client-box {
+    min-width: 120px;
+    max-width: 120px;
+    height: 70px;
+  }
   .client-box img {
-  max-width: 150px;
-  max-height: 80px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
+    max-width: 85%;
+    max-height: 85%;
+  }
 }
 
-
-}

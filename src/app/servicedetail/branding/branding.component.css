@@ -1,6 +1,6 @@
 /* General */
 .service-detail-container {
-  background-color: #1a1a1a;
+  background-color: #1E1D20 !important;
   color: #fff;
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -33,135 +33,7 @@
   font-weight: 500;
   margin: 0 8px;
 }
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-}
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.hero-header .nav-link {
-  color: #ffffff;
-  font-weight: 500;
-  margin: 0 8px;
-}
-
-.nav-cont {
-  text-align: center;
-  margin-left: 70px;
-  margin-top: 30px;
-  padding: 8px 20px;
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.058);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border: 0.5px solid rgba(255, 255, 255, 0.25);
-
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-cont::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
- 
-}
-
-.nav-cont::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  
-}
-
-.nav-cont .nav-link {
-  font-weight: 300;
-  font-size: 16px;
-  color: #ffffff;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.nav-cont .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 50%;
-  bottom: -4px;
-  background: #000;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.nav-cont .nav-link:hover {
-  color: #9d9d9d;
-}
-
-.nav-cont .nav-link:hover::after {
-  width: 100%;
-}
-
-.connect-btn {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border: 0.5px solid #ffffff;
-    border-radius: 20px;
-    background: transparent;
-    padding: 8px 10px;
-    font-weight: 500;
-    color: #fff;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    z-index: 1;
-    text-decoration: none; /* removes underline */
-    margin-top: 20px;
-    margin-right: 8px;
-  }
-  
-  .connect-btn span {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: #420232; /* poppy pink/red ripple */
-    transform: translate(-50%, -50%);
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    z-index: -1;
-  }
-  
-  .connect-btn:hover {
-    color: #fff; /* keep white text for contrast */
-    border-color: #e3dce9; /* match ripple */
-  }
-  
-  .connect-btn:hover span {
-    width: 300px;
-    height: 300px;
-  }
-  
-.bi-arrow-right-circle{
-    margin-right: 8px;
-  }
-  
 
 /* Content Layout */
 .content {
@@ -240,7 +112,7 @@
 }
 
 .details-btn {
-  background: #00ff66;
+  background: #9CE266;
   border: none;
   padding: 10px 20px;
   color: black;
@@ -261,12 +133,12 @@
 }
 
 .clickable:hover {
-  color: #00ff66;
+  color: #9CE266;
   transform: scale(1.2);
 }
 
 .clickable.active {
-  color: #00ff66;
+  color: #9CE266;
   background: #333;
   border-radius: 8px;
   padding: 6px;
@@ -317,20 +189,7 @@
   padding: 20px;
   text-align: center;
 }
-.contact-btn {
-  display: inline-block;
-  background-color: #0a0a0a; /* your preferred color */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
 
-.contact-btn:hover {
-  background-color: #04114b;
-}
 /* Container and background */
 .service-detail-container {
   position: relative;
@@ -351,31 +210,7 @@ app-light-ray {
 }
 
 /* Navbar */
-.hero-header {
-  z-index: 10;
-  position: relative;
-  padding: 0.5rem 1rem;
-}
 
-.logo-text {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.connect-btn {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.connect-btn:hover {
-  background-color: #ff4b4b;
-  transform: scale(1.05);
-}
 
 /* Sidebar icons */
 .sidebar-mobile i {
@@ -387,7 +222,7 @@ app-light-ray {
 
 .sidebar-mobile i.active,
 .sidebar-mobile i:hover {
-  color: #ff6b6b;
+  color: #9CE266;
   transform: scale(1.2);
 }
 
@@ -415,13 +250,14 @@ app-light-ray {
   text-transform: uppercase;
   padding:8px 10px;
   border-radius: 25px;
-  background-color: #4110b6;
+  background-color: #1E1D20;
+  border: 0.5px #9d9d9d;
   color: #fff;
   transition: 0.3s;
 }
 
 .contact-btn:hover {
-  background-color: #0a0101;
+  background-color: #9CE266;
   transform: scale(1.05);
 }
 
@@ -465,4 +301,32 @@ app-light-ray {
 }
 
 
+.btn-outline-light-custom {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 0.5px solid #fff;
+  border-radius: 30px; /* pill shape */
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+}
 
+.btn-outline-light-custom:hover,
+.btn-outline-light-custom:focus {
+  background-color: #9CE266;
+  border-color: #9CE266;
+  color: #1E1D20; /* dark text on hover */
+  text-decoration: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .btn-group {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,39 +1,44 @@
 <section id="service" class="services-section text-white py-5 px-3"> 
   <div class="container">
-    <h2 class="section-title mb-2">How can Wynstack Help?</h2>
-    <hr class="section-underline">
+    <h2 class="section-title mb-2 animate-on-scroll">How can Wynstack Help?</h2>
+    <hr class="section-underline animate-on-scroll">
     
-    <div class="section-description mb-4">
+    <div class="section-description mb-4 animate-on-scroll">
       <p>
         From crafting high-performance websites to building sales-driven Shopify stores and executing data backed digital marketing campaigns, we provide everything you need to grow your brand online.
       </p>
     </div>
 
-    <div routerLink="/web-services" class="section-link">
+    <div routerLink="/web-services" class="section-link  animate-on-scroll">
       <i class="bi bi-arrow-right-circle"></i>
-      <span>Services</span>
+      <span >Services</span>
     </div>
 
     <div class="row">
       <!-- Reusable Card with dynamic content -->
-      <div class="col-md-4 mb-4" *ngFor="let card of cardData; let i = index">
+      <div class="col-md-4 mb-4 animate-on-scroll" *ngFor="let card of cardData; let i = index">
         <div class="hover-card">
           <div class="hover-card-inner">
-            <div class="hover-card-front">
-              <div class="card-number">/ 0{{ i + 1 }}</div>
-              <div class="card-content">
-                <h5>{{ card.title }}</h5>
+            <div class="hover-card-front" style="background-color: #1E1D20;">
+              <div class="hover-card-front">
+                <div class="image-flex-center">
+                  <img [src]="card.bgUrl" alt="Radial Background" class="radial-bg" />
+                  <img [src]="card.imageUrl" alt="{{card.title}}" class="main-image" />
+                </div>
+                <h5 class="card-title">{{ card.title }}</h5>
               </div>
             </div>
             <div class="hover-card-back">
               <p>{{ card.description }}</p>
-              <a [routerLink]="card.routePath"  class="learn-more">
-                <i class="bi bi-arrow-right-circle-fill"></i> Learn more 
+              <a [routerLink]="card.routePath" class="learn-more">
+                <i class="bi bi-arrow-right-circle-fill"></i> Learn more
               </a>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
+      
+      
     </div>
   </div>
 </section>
