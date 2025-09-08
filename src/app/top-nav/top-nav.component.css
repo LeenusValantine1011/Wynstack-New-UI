@@ -89,7 +89,7 @@
     height: 2px;
     left: 50%;
     bottom: -4px;
-    background: #000;
+    background: #9CE266;
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
@@ -133,15 +133,15 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: #ff4d6d; /* poppy pink/red ripple */
+    background-color: #9CE266; /* poppy pink/red ripple */
     transform: translate(-50%, -50%);
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     z-index: -1;
   }
   
   .connect-btn:hover {
-    color: #fff; /* keep white text for contrast */
-    border-color: #ff4d6d; /* match ripple */
+    color: #000000; /* keep white text for contrast */
+    border-color: #9CE266; /* match ripple */
   }
   
   .connect-btn:hover span {

@@ -8,6 +8,7 @@ import { Component, Input, HostBinding } from '@angular/core';
 export class InteractiveHoverButtonComponent {
   /** Button text */
   @Input() label = 'Button';
+  @Input() hoverLabel: string = 'Let\'s Go';
 
   /** Optional: set CSS vars from outside if you want to theme it */
   @HostBinding('style.--ihb-primary') @Input() primary = '#ffffff';        // dot color

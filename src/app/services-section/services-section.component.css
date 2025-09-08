@@ -1,5 +1,5 @@
 .services-section {
-  background-color: #060010;
+  background-color: #1E1D20;
   padding: 3rem 1rem;
   color: white;
 }
@@ -19,14 +19,16 @@
 
 .section-description {
   max-width: 700px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 200;
   text-align: left;
   margin-top: 1rem;
-  margin-left: 5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-left: 4rem;
+  color: #c8c8c8;
 }
-.section-description i {
-  font-size: 1.5rem;
-}
+
+
 .section-link {
   display: flex;
   align-items: center;
@@ -34,7 +36,7 @@
   color: white;
   cursor: pointer;
   font-size: 1rem;
-  margin-left: 5rem;
+  margin-left: 4rem;
   margin-bottom: 1.5rem;
 }
 .section-link i{
@@ -49,8 +51,9 @@
   position: relative;
   height: 400px;
   overflow: hidden;
-  border: 1px solid white;
+  border: 0.5px solid rgb(170, 170, 170);
   border-radius: 10px;
+
   background-color: #1a1a1a;
   transition: transform 0.3s ease;
 }
@@ -61,17 +64,6 @@
   height: 100%;
 }
 
-.hover-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.2s ease;
-}
 
 .card-number {
   position: absolute;
@@ -91,7 +83,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #F8F883;
+  background-color: #9CE266;
   color: #000;
   padding: 1rem;
   box-sizing: border-box;
@@ -156,4 +148,143 @@
   transform: translateY(0);
   z-index: 2;
   pointer-events: auto; /* enable button clicks */
+}
+
+.bi-arrow-right-circle{
+  color: #9CE266;
+}
+
+.hover-card-front {
+  position: relative;
+  background: #1E1D20;
+  height: 100%;
+  border-radius: 18px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Card number top-left */
+.card-number {
+  position: absolute;
+  top: 1rem;
+  left: 0.1rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Flex container to center icons vertically */
+.image-flex-center {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Larger, perfectly centered radial bg */
+.radial-bg {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 220px;
+  height: 220px;
+  max-width: 95vw;
+  max-height: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.93;
+}
+/* Larger main image, up front */
+.main-image {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  max-width: 80vw;
+  max-height: 50vh;
+  object-fit: contain;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 790px) {
+  .radial-bg { width: 230px; height: 230px; }
+  .main-image { width: 220px; height: 220px; }
+  .card-title { font-size: 1.15rem; margin-bottom: 1.1rem; }
+  .card-number { font-size: 1rem;}
+}
+
+.hover-card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden; 
+  cursor: pointer;
+  background: transparent; 
+}
+
+.hover-card-front {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E1D20;  
+  border-radius: 10px;
+  z-index: 2;
+  display: flex;
+  border-width: 0.5px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  transition: opacity 0.4s ease;
+}
+
+.hover-card-back {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9CE266; /* your back background */
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none; /* disable pointer events when hidden */
+}
+
+/* On hover, show the back */
+.hover-card:hover .hover-card-front {
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hover-card:hover .hover-card-back {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2;
+  pointer-events: auto; /* enable interaction */
 }
