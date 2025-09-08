@@ -53,47 +53,51 @@
 }
 
 /* Scrolling */
-.scroll-wrapper {
-  overflow: hidden;
+.scroll-section {
   width: 100%;
-  position: relative;
+  overflow: hidden;
+  background: transparent;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* increased gap between lines */
 }
 
 .scrolling-track {
   display: flex;
-  gap: 20px;
-  animation: scroll-track 25s linear infinite;
+  gap: 60px; /* increased spacing between logos */
+  white-space: nowrap;
   width: max-content;
+  filter: grayscale(100%) brightness(0.7); /* monochrome effect */
+  opacity: 0.8; /* subtle transparency */
+  user-select: none;
+  pointer-events: none;
 }
 
-.client-box {
-  min-width: 200px;
-  max-width: 200px;
-  height: 100px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  box-sizing: border-box;
-  overflow: hidden; 
-  padding: 0;
+.scrolling-track img {
+  height: 90px; /* larger logos */
+  width: auto;
+  transition: filter 0.3s ease;
 }
 
-.client-box img {
-  max-width: 90%;        
-  max-height: 90%;   
-  width: auto;          
-  height: auto;         
-  object-fit: contain;   
-  display: block;
-  margin: 0 auto;
+/* Optional: Slight color highlight on hover */
+.scrolling-track img:hover {
+  filter: none;
+  opacity: 1;
+  cursor: pointer;
 }
 
-
-/* Seamless scroll effect */
-@keyframes scroll-track {
+/* Increased scroll speed */
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes scroll-right-to-left {
   0% {
     transform: translateX(0);
   }
@@ -102,36 +106,26 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .underline {
-    width: 150px;
-  }
-
-  .client-box {
-    min-width: 150px;
-    font-size: 1rem;
-  }
-
-  .contact-link {
-    font-size: 1rem;
-  }
-
-  .contact-link i {
-    font-size: 1.2rem;
-  }
-  .client-box {
-    min-width: 120px;
-    max-width: 120px;
-    height: 70px;
-  }
-  .client-box img {
-    max-width: 85%;
-    max-height: 85%;
-  }
+.left-to-right {
+  animation: scroll-left-to-right 20s linear infinite; /* faster */
 }
 
+.right-to-left {
+  animation: scroll-right-to-left 20s linear infinite; /* faster */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-section {
+    padding: 15px 0;
+    gap: 25px;
+  }
+
+  .scrolling-track {
+    gap: 40px;
+  }
+
+  .scrolling-track img {
+    height: 60px;
+  }
+}
