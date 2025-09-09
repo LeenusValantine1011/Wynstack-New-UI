@@ -79,12 +79,14 @@
     font-weight: 300;
     font-size: 16px;
     color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     position: relative;
     transition: color 0.3s ease;
   }
   .nav-cont .nav-link::after {
     content: '';
     position: absolute;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     width: 0;
     height: 2px;
     left: 50%;

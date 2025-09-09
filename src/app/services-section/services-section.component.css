@@ -5,14 +5,15 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 60px;
   font-weight: light;
   margin-bottom: 0.25rem;
 }
 
-.section-underline {
+.underline {
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(102, 99, 99);
+  background: #1E1D20;
   width: 100%;
   margin-bottom: 1.5rem;
 }
@@ -23,7 +24,7 @@
   font-weight: 200;
   text-align: left;
   margin-top: 1rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin-left: 4rem;
   color: #c8c8c8;
 }

@@ -14,7 +14,7 @@
   }
   
   .contact-heading {
-    font-size: 3rem;       /* matches screenshot */
+    font-size: 60px;       /* matches screenshot */
     font-weight: 500;      /* medium thickness */
     color: #fff;           /* white text */
     line-height: 1.2;      /* proper spacing between lines */
@@ -43,6 +43,7 @@
   .contact-subtext {
     font-size: 1rem;
     color: #b5b5b5;
+    font-family: 'Inter', sans-serif;
     max-width: 90%;
   }
   

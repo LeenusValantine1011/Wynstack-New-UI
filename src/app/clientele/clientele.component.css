@@ -5,7 +5,7 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 60px;
   font-weight: light;
   margin-bottom: 0.25rem;
 }
@@ -25,7 +25,7 @@
   font-weight: 200;
   text-align: left;
   margin-top: 1rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin-left: 4rem;
   color: #c8c8c8;
 }
