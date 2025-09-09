@@ -11,7 +11,6 @@
 }
 
 .underline {
-  
   border: none;
   border-top: 1px solid rgb(102, 99, 99);
   background: #1E1D20;
@@ -48,7 +47,7 @@
   color: #cccccc;
 }
 
-.bi-arrow-right-circle{
+.bi-arrow-right-circle {
   color: #9CE266;
 }
 
@@ -61,57 +60,62 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* increased gap between lines */
+  gap: 30px;
 }
 
 .scrolling-track {
   display: flex;
-  gap: 60px; /* increased spacing between logos */
+  gap: 60px;
   white-space: nowrap;
   width: max-content;
-  filter: grayscale(100%) brightness(0.7); /* monochrome effect */
-  opacity: 0.8; /* subtle transparency */
+  filter: grayscale(100%) brightness(0.7);
+  opacity: 0.8;
   user-select: none;
   pointer-events: none;
 }
 
-.scrolling-track img {
-  height: 90px; /* larger logos */
-  width: auto;
-  transition: filter 0.3s ease;
+/* Rectangle logo box */
+.logo-box {
+  width: 240px;   /* increased rectangle width */
+  height: 135px;  /* increased rectangle height (16:9) */
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Optional: Slight color highlight on hover */
-.scrolling-track img:hover {
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Optional hover */
+.logo-box:hover img {
   filter: none;
   opacity: 1;
   cursor: pointer;
 }
 
-/* Increased scroll speed */
+/* Animations */
 @keyframes scroll-left-to-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 @keyframes scroll-right-to-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .left-to-right {
-  animation: scroll-left-to-right 20s linear infinite; /* faster */
+  animation: scroll-left-to-right 20s linear infinite;
 }
 
 .right-to-left {
-  animation: scroll-right-to-left 20s linear infinite; /* faster */
+  animation: scroll-right-to-left 20s linear infinite;
 }
 
 /* Responsive */
@@ -125,7 +129,8 @@
     gap: 40px;
   }
 
-  .scrolling-track img {
-    height: 60px;
+  .logo-box {
+    width: 160px;   /* smaller on mobile */
+    height: 90px;
   }
 }
