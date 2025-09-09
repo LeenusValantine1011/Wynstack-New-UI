@@ -1,19 +1,21 @@
 .footer-section {
-    background: #060010; /* Match your dark theme */
+    background: #1E1D20; 
     color: #fff;
-    border-top: 2px solid #282138;
+    border-top: 0.5px solid #5a5a5a;
     font-family: 'Inter', sans-serif;
   }
   
   .footer-logo {
-    font-weight: 700;
+    font-weight: 500;
+    font-family: 'Righteous', sans-serif;
     font-size: 2rem;
     letter-spacing: 0.05em;
   }
   
   .footer-desc {
-    font-size: 1.05rem;
+    font-size: 0.85rem;
     opacity: 0.85;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
   
   .footer-social .social-icon {
@@ -22,7 +24,7 @@
     transition: color 0.25s;
   }
   .footer-social .social-icon:hover {
-    color: #aaa;
+    color: #9CE266 !important;
   }
   
   .footer-links .footer-link {
@@ -33,7 +35,7 @@
     transition: color 0.2s;
   }
   .footer-links .footer-link:hover {
-    color: #fff;
+    color: #9CE266;
     text-decoration: none;
   }
   

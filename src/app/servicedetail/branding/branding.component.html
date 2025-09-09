@@ -1,13 +1,13 @@
 <div class="d-none d-md-block service-detail-container service-section">
   <!-- Navbar -->
   <app-top-nav></app-top-nav>
-<!-- Back Button -->
-<button class="btn btn-outline-light mt-3 ms-4" routerLink="">⬅ Back</button>
+  <!-- Back Button -->
+  <button class="btn btn-outline-light mt-3 ms-4" routerLink="">⬅ Back</button>
 
 
   <!-- Main Content -->
   <div class="content">
-    
+
     <!-- Left Sidebar -->
     <div class="sidebar">
 
@@ -38,77 +38,84 @@
         </li>
       </ul>
     </div>
-    
+
 
     <!-- Text + Image Section -->
     <div class="main-section">
-      
+
       <div class="text-content">
-       
+
         <!-- Heading aligned left -->
         <h1 class="text-start">Branding and Creative Design</h1>
 
         <p>
           We create powerful brand identities that leave lasting impressions on your audience.
-Our services include logos, brand guidelines, graphic design, and user-friendly UI/UX.
-By blending creativity with functionality, we ensure your brand stands out in the market.
-Strong visuals help you communicate your values clearly and professionally.
+          Our services include logos, brand guidelines, graphic design, and user-friendly UI/UX.
+          By blending creativity with functionality, we ensure your brand stands out in the market.
+          Strong visuals help you communicate your values clearly and professionally.
         </p>
         <div class="btn-group">
-          <a class="contact-btn" routerLink="/contact">Contact Us</a>
+          <a class="btn-outline-light-custom" routerLink="/contact">Contact Us</a>
         </div>
+        
       </div>
 
       <div class="image-content">
-        <img src="/assets/Service/Branding.png"
-             alt="service-img" />
+        <img src="assets/Service/branding.svg" alt="service-img" />
       </div>
     </div>
   </div>
 </div>
 
-<div class="d-block d-md-none service-detail-container service-section">
+<div class="d-block d-md-none service-detail-container pb-5 service-section">
 
   <app-top-nav></app-top-nav>
-  
-  <div class="d-block d-md-none mobile-nav content-mobile container-fluid px-2 " >
+  <a routerLink="/hero" class="d-inline-flex align-items-center back-link">
+    <i class="bi bi-arrow-left-short" ></i>
+    <span class="ms-1">Back</span>
+  </a>
+
+
+  <div class=" mobile-nav content-mobile container-fluid px-2 ">
     <div class="sidebar-mobile d-flex justify-content-around mb-3 mt-3 flex-wrap">
       <i class="bi bi-code-slash clickable" routerLink="/web-services"
         [class.active]="selectedService === 'Website Development'"></i>
-  
+
       <i class="bi bi-bag-check clickable" routerLink="/shopify-store"
         [class.active]="selectedService === 'Shopify Store Setup'"></i>
-  
+
       <i class="bi bi-megaphone clickable" routerLink="/digital-marketing"
         [class.active]="selectedService === 'Digital Marketing'"></i>
-  
+
       <i class="bi bi-palette clickable" routerLink="/branding"
         [class.active]="selectedService === 'Branding and Creative Design'"></i>
-  
+
       <i class="bi bi-pencil-square clickable" routerLink="/content-creation"
         [class.active]="selectedService === 'Content Creation'"></i>
-  
+
       <i class="bi bi-mortarboard clickable" routerLink="/student-project"
         [class.active]="selectedService === 'Student Project Development'"></i>
-    </div>  
+    </div>
 
     <!-- Text Section -->
     <div class="text-content-mobile text-center mb-3">
       <h2>Branding and Creative Design</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et risus rhoncus, ullamcorper
-        mauris eu, tempor justo. Vestibulum sed magna sed tellus placerat gravida. Aliquam finibus
-        ullamcorper est. Sed cursus, lectus eu accumsan imperdiet.
+        We create powerful brand identities that leave lasting impressions on your audience.
+        Our services include logos, brand guidelines, graphic design, and user-friendly UI/UX.
+        By blending creativity with functionality, we ensure your brand stands out in the market.
+        Strong visuals help you communicate your values clearly and professionally.
       </p>
 
-      <a class="contact-btn btn btn-primary" routerLink="/contact">Contact Us</a>
+      <div class="btn-group">
+        <a class="btn-outline-light-custom" routerLink="/contact">Contact Us</a>
+      </div>
+      
     </div>
 
     <!-- Image Section -->
     <div class="image-content-mobile text-center">
-      <img src="https://img.freepik.com/free-vector/3d-abstract-background-with-paper-style_23-2149113324.jpg"
-           alt="service-img"
-           class="img-fluid rounded" />
+      <img src="assets/Service/branding.svg" alt="service-img" class="img-fluid rounded" />
     </div>
   </div>
 </div>

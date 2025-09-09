@@ -5,8 +5,8 @@
 <app-top-nav></app-top-nav>
 
     <!-- Hero Text / Left Column -->
-    <div class="hero-container container-fluid">
-      <div class="row mt-0 align-items-center">
+    <div class="hero-container container-fluid mt-0 ">
+      <div class="row mt-0 pt-0 align-items-center">
         <div class="col-lg-6 hero-text">
           <h1 class="hero-title">
             <app-decrypted-text [text]="'Built for'" [speed]="100" [delay]="400"
@@ -19,10 +19,9 @@
             </app-decrypted-text>
           </h1>
 
-          <!-- Contact Block -->
           <div class="contact-block mt-4">
-            <app-interactive-hover-button routerLink="/web-services" label="Get Started" [fg]="'#AC99E8'"
-              [bg]="'linear-gradient(90deg, rgba(137,74,255,1) 0%, rgba(78,44,212,1) 100%)'"></app-interactive-hover-button>
+            <app-interactive-hover-button routerLink="/web-services" label="Get Started" [fg]="'#000000'"
+              [bg]="'#9CE266'"></app-interactive-hover-button>
             <hr class="divider" />
             <p class="contact-desc">
               We help ambitious brands grow with high-impact websites, sales-driven Shopify
@@ -35,7 +34,7 @@
         <!-- Right column (optional image / animation slot) -->
         <div class="col-lg-6 hero-img d-none d-lg-flex justify-content-end">
           <div class="tilted-wrapper">
-            <app-tilted-card imageUrl="assets/hero/1611723379.svg" label="Wynstack" class="img-fluid">
+            <app-tilted-card imageUrl="assets/hero/Rectangle 34624162.svg" label="Wynstack" class="img-fluid">
             </app-tilted-card>
           </div>
         </div>
@@ -47,5 +46,4 @@
 
 <app-clientele></app-clientele>
 <app-services-section></app-services-section>
-<app-journeysection></app-journeysection>
 <app-contactsection></app-contactsection>
