@@ -17,33 +17,45 @@
             faster & easier.
           </h2>
           <p class="contact-subtext  animate-on-scroll">
-            Tell us about your project and let’s turn your ideas into reality. 
+            Tell us about your project and let’s turn your ideas into reality.
             We’re here to help you every step of the way.
           </p>
         </div>
         <div class="col-lg-6 mt-4">
           <div class="contact-form-box">
             <h5 class="form-heading  animate-on-scroll">
-              Let us know about your project & we will help you grow your 
+              Let us know about your project & we will help you grow your
               business from scratch.
             </h5>
-            <form class=" animate-on-scroll">
+            <form class="animate-on-scroll" (submit)="sendEmail($event)">
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="First & Last name" />
+                <input type="text" name="user_name" class="form-control" placeholder="First & Last name" required />
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" />
+                <input type="email" name="user_email" class="form-control" placeholder="Email" required />
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Phone number" />
+                <input type="text" name="user_phone" class="form-control" placeholder="Phone number" />
               </div>
               <div class="mb-3">
-                <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
+                <textarea name="message" class="form-control" rows="4" placeholder="Write your message"
+                  required></textarea>
               </div>
               <button type="submit" class="btn btn-outline-light w-100">
                 Send Message
               </button>
             </form>
+
+            <!-- Success Modal -->
+            <div class="modal-backdrop" *ngIf="showSuccessModal">
+              <div class="modal-content">
+                <h3>Message Sent</h3>
+                <p>We will contact you ASAP !!!</p>
+                <button (click)="closeModal()" class="btn btn-primary">Close</button>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>

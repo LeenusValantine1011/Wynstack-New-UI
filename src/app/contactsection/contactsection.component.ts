@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-contactsection',
@@ -6,6 +7,9 @@ import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./contactsection.component.css']
 })
 export class ContactsectionComponent implements AfterViewInit {
+
+  showSuccessModal = false;
+
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngAfterViewInit() {
@@ -23,4 +27,24 @@ export class ContactsectionComponent implements AfterViewInit {
     // Trigger once immediately in case elements already in view
     onScroll();
   }
+
+ sendEmail(e: Event) {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+
+    emailjs.sendForm('service_shxhofw', 'template_q6780jy', form, '6bRmLkJcjyXisGbdm')
+      .then(() => {
+        this.showSuccessModal = true;
+        form.reset();
+      })
+      .catch((error: { text: any; }) => {
+        console.error('Failed to send message:', error.text);
+        alert('Failed to send message, please try again.');
+      });
+  }
+
+  closeModal() {
+    this.showSuccessModal = false;
+  }
+
 }

@@ -126,3 +126,89 @@
   background-color: #9CE266;
   color: #1E1D20;
 }
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1050;
+  backdrop-filter: blur(6px); /* subtle blur for elegance */
+}
+
+.modal-content {
+  background: #1B1B1B;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 20px rgba(156, 226, 102, 0.4);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 1.2rem;
+  color: #9CE266;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+}
+
+.modal-content p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 auto 1.8rem auto;
+  max-width: 360px;
+  color: #d1d1d1;
+}
+
+.modal-content button {
+  padding: 0.65rem 2rem;
+  border: none;
+  background-color: #9CE266;
+  color: #1E1D20;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(156, 226, 102, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content button:hover,
+.modal-content button:focus {
+  background-color: #7CB435;
+  box-shadow: 0 6px 18px rgba(124, 180, 53, 0.9);
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 2rem 1.5rem;
+    max-width: 90vw;
+  }
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+  .modal-content p {
+    font-size: 1rem;
+    max-width: 90vw;
+  }
+  .modal-content button {
+    width: 100%;
+    padding: 0.75rem 0;
+  }
+}
+
+input.form-control:-webkit-autofill,
+textarea.form-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #222222 inset !important; /* match your bg color */
+  -webkit-text-fill-color: #f0f0f0 !important; /* text color */
+  transition: background-color 5000s ease-in-out 0s;
+}
