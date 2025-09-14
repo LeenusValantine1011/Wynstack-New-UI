@@ -1,11 +1,11 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showNav = false;
 
   constructor(private router: Router, private renderer: Renderer2) {
@@ -24,5 +24,12 @@ export class AppComponent {
           }
         }
       });
+  }
+  ngOnInit(): void {
+    this.router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 }

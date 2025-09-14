@@ -12,8 +12,8 @@ import { ContentcreationComponent } from './servicedetail/contentcreation/conten
 import { StudentprojectComponent } from './servicedetail/studentproject/studentproject.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/hero', pathMatch: 'full' } ,
-  { path: 'hero', component: HerosectionComponent },
+  { path: '', redirectTo: '', pathMatch: 'full' } ,
+  { path: '', component: HerosectionComponent },
   { path: 'service', component: ServicesSectionComponent},
   { path: 'contact', component: ContactsectionComponent },
   { path: 'about', component: JourneysectionComponent },
